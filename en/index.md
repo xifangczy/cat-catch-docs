@@ -31,8 +31,8 @@ features:
     title: Invoke Local Programs
     details: Supports m3u8dl://, aria2 and other protocols to launch local download tools, fitting seamlessly into your workflow.
   - icon: 🏷️
-    title: Tag System
-    details: Tag resources and replace keywords for easy categorization and batch operations.
+    title: Deep Search
+    details: Continuously updated search scripts that intercept key functions to uncover hidden resources, tackling even the most stubborn websites.
   - icon: 🔧
     title: Highly Configurable
     details: Customize capture types, regex rules, context menus, copy options and more — enable only what you need.
