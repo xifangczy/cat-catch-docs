@@ -6,7 +6,7 @@ description: The popup page is the main display page of the extension, showing s
 
 ![Popup Page](/assets/popup.png)
 
-![](/assets/image.png) If a resource has this icon, it means the resource comes from deep search, regex matching, Tampermonkey scripts, or other special sources.
+![Special Resources](/assets/image.png) If a resource has this icon, it means the resource comes from deep search, regex matching, Tampermonkey scripts, or other special sources.
 
 ## Current Page
 
@@ -30,6 +30,6 @@ Once enabled, resources are downloaded immediately as they are sniffed. This is 
 
 ## **Other Buttons**
 
-![](/assets/qrcode.png) Show a QR code of the resource URL
+![qrcode](/assets/qrcode.png) Show a QR code of the resource URL
 
-![](/assets/cat-down.png) Download resource with Referer header
+![cat-down](/assets/cat-down.png) Download resource with Referer header

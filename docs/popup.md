@@ -2,7 +2,7 @@
 
 ![popup页面](/assets/popup.png)
 
-![](/assets/image.png) 如果资源包含该图标，表示资源来自深度搜索、正则表达式、油猴脚本等特殊资源。
+![特殊资源](/assets/image.png) 如果资源包含该图标，表示资源来自深度搜索、正则表达式、油猴脚本等特殊资源。
 
 ## 当前页面
 
@@ -26,6 +26,6 @@
 
 ## **其他按钮**
 
-![](/assets/qrcode.png)显示资源地址的二维码按钮
+![qrcode](/assets/qrcode.png)显示资源地址的二维码按钮
 
-![](/assets/cat-down.png)携带请求头 Referer下载资源按钮
+![cat-down](/assets/cat-down.png)携带请求头 Referer下载资源按钮
