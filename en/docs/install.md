@@ -1,17 +1,35 @@
 # Installation
 
-- [Google Chrome Extension](https://chrome.google.com/webstore/detail/jfedfbgedapdagkghmgibemcoggfppbb)
-
-- [Edge Add-on](https://microsoftedge.microsoft.com/addons/detail/oohmdefbjalncfplafanlagojlakmjci)
-
-- [Firefox Add-on](https://addons.mozilla.org/addon/cat-catch/)
-
-- [GitHub Source](https://github.com/xifangczy/cat-catch)
-
-<figure>
-  <img src="/assets/edge-qr-code.png" alt="Edge Android Extension Download" width="200">
-  <figcaption>Edge Android Extension Download</figcaption>
-</figure>
+<div class="install-cards">
+  <div class="card">
+    <div class="card-icon">🧩</div>
+    <div class="card-title">Chrome Web Store</div>
+    <div class="card-desc">For Chrome, Edge, and all Chromium-based browsers</div>
+    <a href="https://chrome.google.com/webstore/detail/jfedfbgedapdagkghmgibemcoggfppbb" class="card-btn">Install</a>
+  </div>
+  <div class="card">
+    <div class="card-icon">🟦</div>
+    <div class="card-title">Edge Add-ons</div>
+    <div class="card-desc">For Microsoft Edge browser</div>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/oohmdefbjalncfplafanlagojlakmjci" class="card-btn">Install</a>
+  </div>
+  <div class="card">
+    <div class="card-icon">🦊</div>
+    <div class="card-title">Firefox Add-ons</div>
+    <div class="card-desc">For Mozilla Firefox browser</div>
+    <a href="https://addons.mozilla.org/addon/cat-catch/" class="card-btn">Install</a>
+  </div>
+  <div class="card">
+    <div class="card-icon">🐱</div>
+    <div class="card-title">GitHub Source</div>
+    <div class="card-desc">View source code, install manually, or contribute</div>
+    <a href="https://github.com/xifangczy/cat-catch" class="card-btn">View Repo</a>
+  </div>
+</div>
+<div class="qr-box">
+  <img src="/assets/edge-qr-code.png" alt="Edge Android Extension Download QR Code" width="160">
+  <p>Edge Android Extension Download</p>
+</div>
 
 ::: warning
 💔 **cat-catch is open source. Anyone can modify and republish it to extension stores. There are already unofficial versions with adware or malicious code. Please protect your data security. Always rely on GitHub and this documentation for official download links.**

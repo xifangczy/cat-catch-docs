@@ -1,0 +1,84 @@
+/* 安装卡片网格 */
+.install-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 1.5rem 1.2rem 1.8rem;
+  text-align: center;
+  transition:
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-color: var(--vp-c-brand);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: var(--vp-c-text-1);
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: var(--vp-c-text-2);
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+/* 按钮样式：和 VitePress 品牌色协调 */
+a.card-btn {
+  display: inline-block;
+  padding: 0.45rem 1.5rem;
+  background: var(--vp-c-brand);
+  color: #ffffff !important;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition:
+    background 0.2s,
+    filter 0.2s;
+}
+a.card-btn:hover {
+  background: var(--vp-c-brand);
+  color: #ffffff !important;
+  text-decoration: none;
+  filter: brightness(0.85);
+}
+
+/* 二维码居中容器 */
+.qr-box {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.qr-box img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  padding: 0.5rem;
+  background: #fff;
+}
+
+.qr-box p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+}
