@@ -4,6 +4,7 @@ export default defineConfig({
   title: "猫抓 (cat-catch)",
   base: "/",
   cleanUrls: true,
+  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
 
   locales: {
     root: {
