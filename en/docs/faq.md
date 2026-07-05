@@ -34,7 +34,7 @@ The resource uses an unconventional encryption method. There's no solution yet â
 
 ## M3U8 merge download shows only a single image / segments are PNG format
 
-The resource disguises video segments as images. In the M3U8 parser, enable `MP4 format` to strip unnecessary image data, or use the third-party tool N_m3u8DL-RE.
+The resource disguises video segments as images. In the M3U8 parser, enable `Data Preprocessing` to strip unnecessary image data, or use the third-party tool N_m3u8DL-RE.
 
 ## M3U8 parser crashes during merge download
 
