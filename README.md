@@ -21,15 +21,14 @@
 cat-catch-docs/
 ├── .github/workflows/   # GitHub Actions 部署工作流
 ├── .vitepress/
-│   └── config.mts       # VitePress 配置（双语、侧边栏、搜索等）
-├── docs/                # 中文文档
-├── en/                  # 英文文档
-│   └── docs/            # 英文文档
-├── assets/              # 图片资源（Vite 处理）
-├── public/              # 静态资源（原样复制到构建产物）
-│   └── assets/          # 特殊图片（frontmatter / 行内引用）
-├── index.md             # 中文首页
-├── en/index.md          # 英文首页
+│   └── config.mts       # VitePress 配置（srcDir、双语、侧边栏、搜索等）
+├── src/                 # 所有 VitePress 内容（srcDir）
+│   ├── docs/            # 中文文档
+│   ├── en/              # 英文文档
+│   │   └── docs/
+│   ├── public/          # 静态资源（原样复制到构建产物）
+│   │   └── assets/      # 图片资源
+│   └── index.md         # 中文首页
 └── package.json
 ```
 
@@ -51,12 +50,11 @@ pnpm docs:preview
 
 ## 📝 编写文档
 
-| 内容     | 目录             | 说明                                        |
-| -------- | ---------------- | ------------------------------------------- |
-| 中文文档 | `docs/`          | 简体中文，站点根路径 `/`                    |
-| 英文文档 | `en/docs/`       | English，路径前缀 `/en/`                    |
-| 图片资源 | `assets/`        | 独占一行的 markdown 图片放这里（Vite 处理） |
-| 特殊图片 | `public/assets/` | frontmatter hero image 和行内图片放这里     |
+| 内容     | 目录                   | 说明                                    |
+| -------- | ---------------------- | --------------------------------------- |
+| 中文文档 | `src/docs/`            | 简体中文，站点根路径 `/`                |
+| 英文文档 | `src/en/docs/`         | English，路径前缀 `/en/`                |
+| 图片资源 | `src/public/assets/`   | 所有图片统一放这里，原样复制到构建产物  |
 
 > 两套文档一一对应，修改一篇中文文档时记得同步更新对应的英文文档。
 
@@ -64,7 +62,7 @@ pnpm docs:preview
 
 推送代码到 `main` 分支后，GitHub Actions 自动构建并部署到 GitHub Pages。
 
-- **在线地址**：<!-- TODO: 填写自定义域名 -->
+- **在线地址**：[https://cat-catch.94cat.com/](https://cat-catch.94cat.com/)
 - **构建流程**：`pnpm install` → `pnpm docs:build` → 部署 `.vitepress/dist`
 - **工作流文件**：`.github/workflows/deploy.yml`
 
@@ -96,9 +94,10 @@ pnpm docs:preview # Preview the build
 
 ### Structure
 
-- `docs/` — Chinese documentation (root locale)
-- `en/docs/` — English documentation (`/en/` prefix)
-- `.vitepress/config.mts` — Site configuration (locales, sidebar, search)
+- `src/docs/` — Chinese documentation (root locale)
+- `src/en/docs/` — English documentation (`/en/` prefix)
+- `src/public/assets/` — Image resources
+- `.vitepress/config.mts` — Site configuration (srcDir, locales, sidebar, search)
 - `.github/workflows/deploy.yml` — Auto-deploy to GitHub Pages on push to `main`
 
 ### Related Repositories

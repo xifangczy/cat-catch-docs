@@ -3,6 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "猫抓 (cat-catch)",
   base: "/",
+  srcDir: "src",
   cleanUrls: true,
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
 
@@ -15,6 +16,7 @@ export default defineConfig({
         nav: [
           { text: "首页", link: "/" },
           { text: "说明文档", link: "/docs/install" },
+          { text: "捐赠❤️赞助", link: "/docs/sponsor" },
         ],
         sidebar: [
           {
@@ -90,6 +92,7 @@ export default defineConfig({
             items: [
               { text: "Installation", link: "/en/docs/install" },
               { text: "Settings", link: "/en/docs/settings" },
+              { text: "Donate ❤️ Sponsor", link: "/en/docs/sponsor" },
             ],
           },
           {
