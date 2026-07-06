@@ -18,7 +18,7 @@ export default defineConfig({
         ],
         sidebar: [
           {
-            text: "🚀 入门",
+            text: "🚀 入门指南",
             items: [
               { text: "安装地址", link: "/docs/install" },
               { text: "设置", link: "/docs/settings" },
