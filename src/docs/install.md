@@ -2,13 +2,13 @@
 
 <div class="install-cards">
   <div class="card">
-    <div class="card-icon">🧩</div>
+    <div class="card-icon">🌐</div>
     <div class="card-title">Chrome 应用商店</div>
     <div class="card-desc">适用于 Chrome、Edge 及所有 Chromium 浏览器</div>
     <a href="https://chrome.google.com/webstore/detail/jfedfbgedapdagkghmgibemcoggfppbb" class="card-btn">前往安装</a>
   </div>
   <div class="card">
-    <div class="card-icon">🟦</div>
+    <div class="card-icon">🌊</div>
     <div class="card-title">Edge 应用商店</div>
     <div class="card-desc">Microsoft Edge 浏览器适用</div>
     <a href="https://microsoftedge.microsoft.com/addons/detail/oohmdefbjalncfplafanlagojlakmjci" class="card-btn">前往安装</a>
