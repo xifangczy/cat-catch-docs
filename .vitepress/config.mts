@@ -85,6 +85,7 @@ export default defineConfig({
         nav: [
           { text: "Home", link: "/en/" },
           { text: "Docs", link: "/en/docs/install" },
+          { text: "Donate ❤️ Sponsor", link: "/en/docs/sponsor" },
         ],
         sidebar: [
           {
@@ -92,7 +93,6 @@ export default defineConfig({
             items: [
               { text: "Installation", link: "/en/docs/install" },
               { text: "Settings", link: "/en/docs/settings" },
-              { text: "Donate ❤️ Sponsor", link: "/en/docs/sponsor" },
             ],
           },
           {
