@@ -3,16 +3,17 @@
 [猫抓 (cat-catch)](https://github.com/xifangczy/cat-catch) 浏览器扩展的官方文档，基于 [VitePress](https://vitepress.dev) 构建，支持中英双语。
 
 ## 🔗 部署网址
+
 [https://cat-catch.94cat.com/](https://cat-catch.94cat.com/)
 
 ## 🛠 技术栈
 
-| 技术 | 版本 |
-|------|------|
-| VitePress | 2.0.0-alpha.17 |
-| Node.js | 22+ |
-| pnpm | 9+ |
-| 部署 | GitHub Pages + GitHub Actions |
+| 技术      | 版本                          |
+| --------- | ----------------------------- |
+| VitePress | 2.0.0-alpha.17                |
+| Node.js   | 22+                           |
+| pnpm      | 9+                            |
+| 部署      | GitHub Pages + GitHub Actions |
 
 ## 📁 目录结构
 
@@ -50,12 +51,12 @@ pnpm docs:preview
 
 ## 📝 编写文档
 
-| 内容 | 目录 | 说明 |
-|------|------|------|
-| 中文文档 | `docs/` | 简体中文，站点根路径 `/` |
-| 英文文档 | `en/docs/` | English，路径前缀 `/en/` |
-| 图片资源 | `assets/` | 独占一行的 markdown 图片放这里（Vite 处理） |
-| 特殊图片 | `public/assets/` | frontmatter hero image 和行内图片放这里 |
+| 内容     | 目录             | 说明                                        |
+| -------- | ---------------- | ------------------------------------------- |
+| 中文文档 | `docs/`          | 简体中文，站点根路径 `/`                    |
+| 英文文档 | `en/docs/`       | English，路径前缀 `/en/`                    |
+| 图片资源 | `assets/`        | 独占一行的 markdown 图片放这里（Vite 处理） |
+| 特殊图片 | `public/assets/` | frontmatter hero image 和行内图片放这里     |
 
 > 两套文档一一对应，修改一篇中文文档时记得同步更新对应的英文文档。
 
@@ -69,10 +70,10 @@ pnpm docs:preview
 
 ## 📖 相关仓库
 
-| 仓库 | 说明 |
-|------|------|
+| 仓库                                                | 说明                                        |
+| --------------------------------------------------- | ------------------------------------------- |
 | [cat-catch](https://github.com/xifangczy/cat-catch) | 浏览器扩展主仓库（Chrome / Edge / Firefox） |
-| [cat-catch-docs](https://github.com/xifangczy/cat-catch-docs) | 文档站本仓库 |
+| [cat-catch-docs](https://cat-catch.94cat.com/)      | 文档站本仓库                                |
 
 ## License
 
@@ -103,4 +104,4 @@ pnpm docs:preview # Preview the build
 ### Related Repositories
 
 - [cat-catch](https://github.com/xifangczy/cat-catch) — The browser extension
-- [cat-catch-docs](https://github.com/xifangczy/cat-catch-docs) — This documentation site
+- [cat-catch-docs](https://cat-catch.94cat.com/) — This documentation site
