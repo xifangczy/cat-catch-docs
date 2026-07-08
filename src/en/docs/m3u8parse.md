@@ -1,122 +1,122 @@
-# M3U8 Parser & Merge Download
+# M3U8 Parser
 
 ## Parse and Merge
 
 ::: info
-M3U8 merge download requires sufficient memory, otherwise it may crash. It is recommended to use **Stream Save** or third-party download tools via the m3u8dl protocol.
+M3U8 merge download requires sufficient memory, otherwise it may crash. It is recommended to use Stream Download or third-party download software, m3u8dl protocol, etc.
 :::
 
-When an M3U8 resource is captured, a parser icon appears next to it. Click to enter the M3U8 parser.
+When an m3u8 resource is captured, a parse icon will appear next to it. Click it to enter the m3u8 parser.
 
-![Parser Entry Button](/assets/popup-m3u8.png)
+![Button to Enter Parser](/assets/popup-m3u8.png)
 
-![M3U8 Parser](/assets/m3u8.png)
+![m3u8 Parser](/assets/m3u8.png)
 
 ### Merge Download
 
-cat-catch includes a simple M3U8 segment merger that can merge and download M3U8 resources from most websites.
+Cat Catch has a built-in simple m3u8 segment merge function that can merge and download m3u8 resources from most websites.
 
-### Suspected Keys Found {#maybekey}
+### Found Suspected Key {#maybekey}
 
-Using the `Deep Search` script or Tampermonkey scripts, cat-catch can automatically collect suspected key data. If any suspected keys are found, this option appears. Select one to auto-fill the custom key input. [Deep Search](cache-capture#deep-search)
+Using the `Deep Search` script or Tampermonkey script can automatically collect suspected key data. If suspected key data is collected, this option will appear. Select one to auto-fill the custom key input box. [Deep Search](cache-capture#deep-search)
 
-![Suspected Key](/assets/maybeKey.png)
+![Found Suspected Key](/assets/maybeKey.png)
 
 ### Verify Key
 
-Automatically tries each key one by one until the correct one is found. If verification fails, there may be an issue with the verification process — it is still recommended to try manually. Select a key, download a single segment, and check if it plays correctly until you find the right key.
+Automatically try keys one by one until the correct key is found. If verification fails, there may be issues with the verification process. It is still recommended to manually try each one. Select a key and merge download 1 segment to check whether it can play normally, until you select the correct key.
 
-### ffmpeg Transcode
+### ffmpeg Transcoding
 
-After download, redirects to the online ffmpeg website for transcoding. When enabled, Stream Save cannot be used.
-
-::: info
-Due to WebAssembly limitations, online ffmpeg can only process videos up to 2GB in size.
-:::
-
-### MP4 Format
-
-cat-catch includes a simple MP4 transcoder. When enabled, the merged result is converted to MP4 format. Only supports TS to MP4 conversion. If transcoding fails, binary merge mode is used automatically. Use a third-party tool for transcoding.
+After downloading, jump to the online ffmpeg website for transcoding. When checked, Stream Download cannot be used.
 
 ::: info
-Merge download and format conversion happen in memory. Insufficient memory may cause the page to crash. **Using ffmpeg transcoding is recommended.**
+Due to WebAssembly limitations, online ffmpeg can currently only process videos up to 2G in size.
 :::
 
-### Stream Save
+### mp4 Format
 
-Downloads in streaming mode, clearing memory as it goes. Solves memory issues with large files and browser limitations. Firefox does not support this yet. When enabled, online ffmpeg transcoding cannot be used. Recommended for live stream recording.
+Cat Catch has a built-in extremely simple mp4 transcoder. If this option is checked, the merged file will be converted to mp4 format. Only TS to MP4 is supported. If transcoding fails during the process, binary merge mode is automatically used. Please use third-party software for transcoding.
+
+::: info
+Merge download and format conversion are performed in memory. Insufficient computer memory may cause the page to crash. **It is recommended to prioritize ffmpeg transcoding**
+:::
+
+### Stream Download
+
+Through streaming download, download and clear memory simultaneously, solving the problem of insufficient memory for large file downloads or browser limitations. Firefox does not support this yet. When checked, online ffmpeg transcoding cannot be used. For live recording, it is recommended to check this option.
 
 ### Audio Only
 
-Saves audio only, using the transcoder. Requires enabling `MP4 transcoding` — the final format is still MP4.
+Only save audio, implemented via the transcoder. You need to check `mp4 Transcoding` and the final format is still mp4.
 
 ### Save As
 
-After download, a save dialog appears to select the directory or change the filename.
+After download, a save dialog will pop up. Select the directory you want to store in or change the saved filename.
 
 ### Data Preprocessing
 
-Some video resources disguise segments as image files. Enable `Data Preprocessing` to strip unnecessary image data.
+Some video resources use image format disguise. You need to check `Data Preprocessing` to strip out image data.
 
-### Auto Close Page
+### Auto Close Page After Download
 
-Closes the parser page after download is complete. If using online ffmpeg web transcoding, that page will also be closed.
+Close the parser page after download is complete. If you use the online ffmpeg web transcoding service, it will also be closed.
 
 ### Key - Custom Key
 
-Some websites' keys are not in the M3U8 file. cat-catch cannot decrypt and merge them automatically. You need to find the key yourself and enter it or upload a key file. Supports base64, hexadecimal, and key file URL.
+Some websites' KEYs are not in the m3u8 file, and Cat Catch cannot decrypt and merge them. You need to find the KEY yourself and fill it in or upload a KEY file. You can fill in base64, hexadecimal, or the URL address of the key file.
 
 ::: info
-Currently only AES-128-CBC encrypted resources are supported. For ChaCha20 / SAMPLE-AES-CTR and other encryption methods, please use third-party tools.
+Currently, only AES-128-CBC encrypted resources are supported. If you encounter ChaCha20 / SAMPLE-AES-CTR or other encryption methods, please use third-party tools.
 :::
 
 ### Download Range
 
-Select the segment range to download. If the M3U8 contains an `#EXT-X-MAP` tag, videos not starting from segment 1 may not play. **Supports time format `00:00:00` — click confirm after editing.**
+Select the segment range you want to download. If the m3u8 has the `#EXT-X-MAP` tag, videos not starting from 1 may not play. **Supports time format 00:00:00. Click Confirm after modification**
 
 ### Record Live Stream
 
-For live M3U8 streams, the parser monitors the M3U8 and continuously saves video to memory until you click `Stop Recording`. Long recording sessions are not recommended. Enable **Stream Save** to avoid memory overflow and page crashes.
+Live m3u8 will show this feature. The parser listens to m3u8 and continuously saves the video to memory until the `Stop Recording` button is clicked. Long-time recording is not recommended. It is recommended to check Stream Download to avoid excessive memory usage and page crashes caused by long-time recording.
 
-### Download Threads
+### Download Thread Count
 
-The number of segments to download simultaneously. Some websites limit concurrent downloads — too many threads may cause errors. Chrome limits concurrent connections to 6. Threads above 6 will wait and not work.
+How many segment files to download simultaneously. Some websites have limits on the number of concurrent file downloads. Too large a value will cause download errors, so the thread count needs to be reduced appropriately. Currently, Chrome browser limits the maximum concurrency to 6. Thread counts greater than 6 will enter a waiting state and will not work.
 
 ### Invoke m3u8DL Download
 
-cat-catch supports invoking [N_m3u8DL-RE](https://github.com/nilaoda/N_m3u8DL-RE) via protocol. See the [m3u8dl](m3u8dl) tutorial for details.
+Cat Catch already supports the protocol for invoking [N_m3u8DL-RE](https://github.com/nilaoda/N_m3u8DL-RE). For details, see the tutorial [m3u8dl Custom Protocol](m3u8dl)
 
 ### More Features - Download Segment List
 
-Downloads all video segment links to a text file (TXT) for use with local batch download and merge tools.
+Use this button to download all video segment links to a txt notepad file. Use local software to batch download and merge.
 
-### More Features - GET Parameters
+### More Features - get Parameters
 
-Some websites require TS segments to have the same parameters as the M3U8 file. Click this button to add or remove the M3U8 file's parameters from the TS URLs.
+Some websites require adding the same parameters as m3u8 to ts before downloading. Click this button to add or remove parameters of the m3u8 file to ts files.
 
 ### More Features - Set Request Headers
 
-Some websites require specific request headers to function properly.
+Some websites require corresponding request headers to work properly.
 
 ### More Features - Send to Online ffmpeg
 
-After merging, sends the result directly to the online ffmpeg file area without performing a merge download.
+After merging, directly send to the online ffmpeg website file area without automatically performing the merge download operation.
 
-## Entry Point
+## Parser Entry
 
-Access via **More Features - M3U8 Parser**.
+Enter the parser entry via More Features - M3U8 Parser.
 
-Supports M3U8 URLs, M3U8 file content, or a list of segment URLs for parsing.
+Supports input of m3u8 links / m3u8 file content / list of segment URLs for parsing.
 
 ### BaseURL
 
-If the M3U8 content you entered has local file segments (no URLs), enter a BaseURL to fetch remote segment files.
+If the segments in the m3u8 content you entered are local files (without URLs), you need to enter BaseURL to obtain remote segment files.
 
 ### ${range} Tag Support
 
-Usage: `${range:1-10}` generates numbers from 1 to 10.
+Usage: ${range:1-10} generates numeric characters from 1 to 10.
 
-For example, enter `https://bmmmd.com/${range:1-3}.ts` and parse:
+For example, fill in `https://bmmmd.com/${range:1-3}.ts` and click parse to generate
 
 ```
 https://bmmmd.com/1.ts
@@ -124,7 +124,7 @@ https://bmmmd.com/2.ts
 https://bmmmd.com/3.ts
 ```
 
-Supports a second parameter to force padding. For example, enter `https://bmmmd.com/${range:1-3,3}.ts` and parse:
+Supports a second parameter to force the number of digits, padding with leading zeros. For example, fill in `https://bmmmd.com/${range:1-3,3}.ts` and click parse to generate
 
 ```
 https://bmmmd.com/001.ts
@@ -132,20 +132,21 @@ https://bmmmd.com/002.ts
 https://bmmmd.com/003.ts
 ```
 
-Supports unknown end index using `?`. For example, enter `https://bmmmd.com/${range:1-?}.ts` — parsing starts from 1 and tries to fetch segments until a 404 or error occurs.
+Supports end index probing, using `?` to replace the end index.
+For example, fill in `https://bmmmd.com/${range:1-?}.ts` and parse. It will start from 1 and try to get segments until it gets 404 or an error.
 
 ::: warning
-Unknown end index allows probing up to 9999 segments maximum.
+Unknown index probing allows a maximum of 9999 segments.
 :::
 
 ### Referer
 
-If errors occur during any of the above operations, enter the Referer header first. Entering a URL only sets the Referer header.
+For all the above operations, if errors occur, you should input the Referer request header data in advance. Entering a URL only sets the Referer.
 
-To set other headers, use JSON format, e.g.:
+To set other request headers, use JSON format, for example
 
 `{"origin":"https://www.bmmmd.com","referer":"https://www.bmmmd.com/test.m3u8"}`
 
 ::: info
-Strict JSON format — properties must use double quotes.
+Strict JSON format. Properties must use double quotes.
 :::

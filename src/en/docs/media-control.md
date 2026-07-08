@@ -1,11 +1,11 @@
 # Media Control
 
-Speed range 0 – 16.0, supports decimals. Below 1.0 is slow motion.
+Speed range 0 - 16.0 allows decimals; values less than 1.0 will slow down playback.
 
 ![Media Control](/assets/media-control.png)
 
-Due to browser security restrictions, no script can capture videos inside iframes or control videos in cross-origin iframes.
+Due to browser security restrictions, scripts cannot capture videos inside iframes, nor can they control videos inside cross-origin iframes.
 
-::: info
-Firefox does not support Picture-in-Picture and Fullscreen.
+::: info Compatibility
+Firefox does not support picture-in-picture and fullscreen.
 :::

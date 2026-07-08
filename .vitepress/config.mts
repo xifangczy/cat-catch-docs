@@ -16,7 +16,7 @@ export default defineConfig({
         nav: [
           { text: "首页", link: "/" },
           { text: "说明文档", link: "/docs/install" },
-          { text: "捐赠❤️赞助", link: "/docs/sponsor" },
+          { text: "捐赠 ❤️ 赞助", link: "/docs/sponsor" },
         ],
         sidebar: [
           {
@@ -37,8 +37,8 @@ export default defineConfig({
             text: "🎯 资源捕获",
             items: [
               { text: "深度搜索 / 缓存捕捉", link: "/docs/cache-capture" },
-              { text: "M3U8解析合并下载", link: "/docs/m3u8parse" },
-              { text: "Dash MPD解析", link: "/docs/mpdparse" },
+              { text: "M3U8解析器", link: "/docs/m3u8parse" },
+              { text: "DASH MPD解析器", link: "/docs/mpdparse" },
               { text: "一些正则匹配示例", link: "/docs/regex-examples" },
             ],
           },
@@ -46,7 +46,7 @@ export default defineConfig({
             text: "🧰 工具 & 集成",
             items: [
               { text: "标签系统 / 替换关键词", link: "/docs/tag" },
-              { text: "使用 m3u8dl:// 协议", link: "/docs/m3u8dl" },
+              { text: "m3u8dl 自定义协议", link: "/docs/m3u8dl" },
               { text: "调用本地程序", link: "/docs/invoke" },
               { text: "在线ffmpeg", link: "/docs/online-ffmpeg" },
               {
@@ -59,7 +59,7 @@ export default defineConfig({
           {
             text: "📌 其他",
             items: [
-              { text: "捐赠❤️赞助", link: "/docs/sponsor" },
+              { text: "捐赠 ❤️ 赞助", link: "/docs/sponsor" },
               { text: "强制屏蔽网站", link: "/docs/blockedsite" },
               { text: "Bug 提交", link: "/docs/issues" },
               { text: "常见问题", link: "/docs/faq" },
@@ -113,10 +113,10 @@ export default defineConfig({
                 link: "/en/docs/cache-capture",
               },
               {
-                text: "M3U8 Parser & Merge Download",
+                text: "M3U8 Parser",
                 link: "/en/docs/m3u8parse",
               },
-              { text: "Dash MPD Parser", link: "/en/docs/mpdparse" },
+              { text: "DASH MPD Parser", link: "/en/docs/mpdparse" },
               {
                 text: "Regex Matching Examples",
                 link: "/en/docs/regex-examples",
@@ -130,7 +130,7 @@ export default defineConfig({
                 text: "Tag System / Replace Keywords",
                 link: "/en/docs/tag",
               },
-              { text: "Using m3u8dl:// Protocol", link: "/en/docs/m3u8dl" },
+              { text: "m3u8dl Custom Protocol", link: "/en/docs/m3u8dl" },
               { text: "Invoke Local Program", link: "/en/docs/invoke" },
               { text: "Online ffmpeg", link: "/en/docs/online-ffmpeg" },
               {

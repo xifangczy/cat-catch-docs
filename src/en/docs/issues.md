@@ -1,15 +1,15 @@
-# Bug Report
+# Feedback
 
-Before submitting a bug, please check the [FAQ](faq) first. **Update to the latest version of cat-catch**, then **reset all settings** and **restart the extension** in settings. If the issue persists, then submit a bug report.
+Before submitting a bug, please first check the [FAQ](faq), **update to the latest version of Cat Catch**, and verify that the issue still persists after **resetting all settings** and **restarting the extension** in the settings. Then submit the bug.
 
-Please provide your **browser and version**, **the relevant URL**, and a **detailed description**.
+Please provide the **browser and version**, **the URL involved**, and a **detailed description**.
 
 **Submission methods:**
 
-GitHub Issues: [https://github.com/xifangczy/cat-catch/issues](https://github.com/xifangczy/cat-catch/issues)
+GitHub issues [https://github.com/xifangczy/cat-catch/issues](https://github.com/xifangczy/cat-catch/issues)
 
-Email: xifangczy@gmail.com
+Email xifangczy@gmail.com
 
 ::: danger
-**You must provide the relevant URL, otherwise we cannot help you. If login is required, please send the details via email.**
+**Please be sure to provide the URL involved, otherwise we cannot help you. If login is required, please send it to me via email. Otherwise, we will not be able to handle your issue.**
 :::

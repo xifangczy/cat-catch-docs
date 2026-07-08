@@ -20,7 +20,7 @@ m3u8dlre:"${url}" --save-dir "%USERPROFILE%\Downloads" --del-after-done --save-n
 
 现在已完成所有设置。
 
-想要调用 N_m3u8DL-RE 点击调用图标皆可。
+想要调用 N_m3u8DL-RE 点击调用图标即可。
 
 ## 示例：
 

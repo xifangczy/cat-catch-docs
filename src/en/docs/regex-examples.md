@@ -1,17 +1,18 @@
-# Regex Matching Examples
+# Some Regex Matching Examples
 
-## Facebook
+## facebook
 
 ```
 (^https://.*\.fbcdn\.net/.*)&bytestart=.*
 ```
 
-## Instagram
+## instagram
 
 ```
 (^https://scontent[a-z0-9-]*\.cdninstagram\.com/.*)&bytestart=.*
 ```
 
 ::: info
-If you have great regex patterns to share, please submit them on GitHub or via email.
+If you have a great regex, feel free to share it on GitHub or via email.
 :::
+

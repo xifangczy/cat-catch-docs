@@ -35,8 +35,8 @@
 | replace | 字符替换 | `${fullFileName\|replace:".m3u8",".mp4"}`<br>文件名中的".m3u8"字符替换成".mp4"<br><br>`${title\|replace:"网站",""}`<br>删除标题中 网址 一词<br><br>参数设定来自 js语言 replace 函数 |
 | replaceAll | 字符替换 | 同上<br>replace 只替换一次。replaceAll 多次替换。<br><br>`${fullDate\|replaceAll:"-","/"}`<br>2020/12/28<br>把日期的分隔符换成 "/" |
 | regexp | 正则提取 | `${url\|regexp:"(https?://[^?]*)"}`<br>资源地址，提取不包含参数的地址 |
-| exists | 如果存在则输出<br>反之输出第二个参数，没有第二参数，不输出任何内容。 | `${referer\|exists:'--headers "Referer:*"'}`<br>如果存在referer 则输出 --headers "Referer:*"<br>*号最终会被替换成referer本身。<br><br>*建议填写在m3u8DL参数内，如果存在referer向m3u8DL传递`--headers`参数，如果没有则不传递。*<br><br>`${fullFileName\|exists:"*","${title}"}`<br>如果有文件名输出自己，没有文件名输出网页标题。 |
-| to | 字符串转换<br>base64<br>urlEncode<br>urlDecode<br>lowerCase<br>upperCase<br>filter | `${title\|to:base64}`<br>5rWL6K+V6KeG6aKR<br>base64编码<br><br>`${url\|to:urlEncode}`<br>https%3A%2F%2Fbmmmd.com%2Ftest.m3u8<br>url编码<br><br>`${url\|to:lowerCase}` 英文字母转小写<br>`${url\|to:upperCase}` 英文字母转大写<br><br>`${url\|to:filter}`  无法作为文件名的字符替换为HTML 字符实体 |
+| exists | 如果存在则输出<br>反之输出第二个参数，没有第二个参数，不输出任何内容。 | `${referer\|exists:'--headers "Referer:*"'}`<br>如果存在referer 则输出 --headers "Referer:*"<br>*号最终会被替换成referer本身。<br><br>*建议填写在m3u8DL参数内，如果存在referer向m3u8DL传递`--headers`参数，如果没有则不传递。*<br><br>`${fullFileName\|exists:"*","${title}"}`<br>如果有文件名输出自己，没有文件名输出网页标题。 |
+| to | 字符串转换<br>base64<br>urlEncode<br>urlDecode<br>lowerCase<br>upperCase<br>filter | `${title\|to:base64}`<br>5rWL6K+V6KeG6aKR<br>base64编码<br><br>`${url\|to:urlEncode}`<br>https%3A%2F%2Fbmmmd.com%2Ftest.m3u8<br>url编码<br><br>`${url\|to:lowerCase}` 英文字母转小写<br>`${url\|to:upperCase}` 英文字母转大写<br><br>`${url\|to:filter}`  无法作为文件名的字符替换为HTML字符实体 |
 | filter | 过滤/替换 无法作为文件名的字符 | `${url\|filter:"_"}` 把不能作为文件名的字符 替换为 下划线<br>被替换的字符 `\ / < > : " \| ? * ~` |
 
 支持链式调用，例如:

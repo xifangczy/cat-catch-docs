@@ -2,60 +2,60 @@
 
 ## Deep Search {#deep-search}
 
-If cat-catch cannot sniff resources by default, trying Deep Search is strongly recommended. It intercepts key functions to analyze hidden M3U8 or MPD files in the website. It also caches M3U8 file content (solving the issue of some sites where M3U8 URLs can only be opened once) and collects all suspected M3U8 keys. [#maybekey](m3u8parse#maybekey)
+If Cat Catch cannot sniff resources by default, it is strongly recommended to try Deep Search first. By intercepting some important functions, it analyzes hidden m3u8 or mpd files on the website. It also tries to cache the m3u8 file content to solve the problem that m3u8 addresses on some websites can only be opened once. And it collects all suspected m3u8 key data [#maybekey](m3u8parse#maybekey)
 
-## Capture / Record
+## Capture/Record
 
 ### Cache Capture {#cache-capture}
 
-Captures video cache data. Use this when Deep Search still cannot capture resources. The downside is that you need to wait for the video to fully buffer. The advantage is that it supports almost all websites. You can use speed playback or drag the progress bar — just buffer the entire video and it will prompt when capture is complete. Only one video can be captured at a time, otherwise data will be corrupted.
+Get video cache. Use it when Deep Search still cannot capture. The disadvantage is that you need to wait for the video to be fully buffered. The advantage is that it supports most websites. You can play at multiple speeds or drag the progress bar. Just buffer the entire video and it will prompt that capture is complete. One capture can only capture one video, otherwise the data will be disordered.
 
-![After enabling capture, a capture prompt and operation buttons appear in the top-right corner of the page.](/assets/cache-capture.png)
+![After enabling capture, a capture prompt and operation buttons will appear in the upper right corner of the webpage.](/assets/cache-capture.png)
 
 #### Expression Extraction
 
-Use CSS selectors to extract text from the current page as the filename.
+Select text on the current page as the filename via CSS selector.
 
 #### Regex Extraction
 
-Use regex to extract text from the current page as the filename. If Expression Extraction is not set, regex matches the entire page. If Expression Extraction is set, regex is applied to the expression extraction results.
+Get characters from the current page as the filename via regex. If Expression Extraction is not set, it will regex match the entire webpage. If Expression Extraction is set, it will regex extract from the expression extraction results.
 
 #### Use ffmpeg to Merge
 
-Captured data is split into separate video and audio files — this is normal (note: allow multiple file downloads in browser prompts). Enable this option to merge them with online ffmpeg if the files are under 2GB.
+The captured data is divided into two files: video and audio. This is normal (pay attention to the browser prompt and allow multiple file downloads). You can check this option. When downloading, if the file is smaller than 2G, online ffmpeg merge will be performed.
 
 ::: info
-Fix the video quality settings before cache capture. Do NOT change quality during capture, otherwise the captured data will be corrupted!
+Fix video quality and other settings before cache capture. Do not modify the quality during the process, otherwise the captured data will be disordered!
 
-When using cache capture consecutively, wait for the video to finish playing and auto-download. Manual downloads may cause data corruption.
+When using cache capture to continuously capture videos, please wait for the video to finish playing and download automatically. Manual download easily causes data confusion.
 :::
 
 ::: info
-**cat-catch strongly advises against using cache capture to record live streams.** The extension stores data in memory — if it crashes, the data is lost forever. For your precious data, use cat-catch to get the live stream URL and use a third-party tool to record and save it.
+**Cat Catch strongly advises against using the cache capture feature to record live streams. The extension stores data in memory. Once crashed, the data will be gone forever. For your precious data, use Cat Catch to obtain the live address and use third-party software to read and save it.**
 :::
 
 ### More Features - Video Recording
 
-Uses JavaScript's built-in recording function to record video. Can record some live streaming sites. It records all your actions on the video, including play, pause, drag, and switch. Recording requires a stronger CPU, otherwise it may lag. **Cannot record DRM-protected videos.**
+Use the built-in JavaScript recording function to record videos. It can record some live streaming websites. It will record all your operations on the video, including play, pause, drag, and switch. Recording videos requires a stronger CPU, otherwise it will be very laggy. **Cannot record copyright-protected videos.**
 
 ### More Features - Screen Capture {#screen-capture}
 
-Uses screen sharing to record video. Requires Chromium 104+.
+Use the screen sharing method to record videos. Requires Chromium 104 and above.
 
 ![Screen Capture](/assets/screen-capture.png)
 
-Select **Screen Capture**. A recording area frame appears on the page. Adjust the frame size and position to cover the entire video. Click **Start Recording** — the browser will prompt whether to allow sharing the tab. Click **Allow** and remember to check "Share tab audio" to record audio. The final format is WebM.
+Select Screen Capture. After clicking, a recording area frame will appear on the page. Adjust the size and position of the frame to select the entire video. After clicking Start Recording, the browser will prompt you whether to allow viewing the tab. Click Allow. Remember to check Share tab audio to record audio. When recording is complete, the final format is webm...
 
 ![](/assets/screen-capture2.png)
 
 ::: info
-Older browser versions may have a bug where no audio is recorded. Please upgrade your browser.
+Lower version browsers may have a bug where there is no sound during recording. Please upgrade your browser.
 :::
 
 ### More Features - Record WebRTC
 
-WebRTC live streams are commonly found in online video chat sites. You can try this script.
+WebRTC live streaming is commonly found in online video chat websites. You can try using this script.
 
 ::: info Compatibility
-All features above require Chromium 102+ and Firefox 128+.
+The above features require Chromium 102 and above, Firefox 128 and above.
 :::

@@ -1,17 +1,17 @@
-# Dash MPD Parser
+# DASH MPD Parsing
 
-When cat-catch captures an MPD file, a parse button appears in the popup.
+When Cat Catch obtains a mpd file, a parse button will be displayed in the popup.
 
 ![MPD Parse Button](/assets/mpd1.png)
 
 ![MPD Parser](/assets/mpd2.png)
 
-The parser extracts all audio and video segments. At the bottom, you can select the desired video quality and audio track.
+The parser will extract all audio and video segments. Select the desired video quality and audio at the bottom.
 
-Click `Convert to M3U8` to open the M3U8 parser for merge download or other operations.
+Click `Convert to m3u8 Parsing` to perform a merge download or other operations in the m3u8 parser.
 
-See the [M3U8 Parser](m3u8parse) tutorial for M3U8 parser operations.
+For m3u8 parser operations, please refer to the tutorial [M3U8 Parser](m3u8parse)
 
 ::: info
-The Dash parser does not currently support encrypted and live stream types.
+The DASH parser is currently in the early stages of development and does not yet support encryption and live streaming types.
 :::

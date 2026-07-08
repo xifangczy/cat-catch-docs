@@ -1,4 +1,4 @@
-# Donate ❤️ Sponsor
+# Donate❤️Sponsor
 
 ## WeChat or Alipay
 ![Sponsor](/assets/milk.jpg)
@@ -9,5 +9,5 @@
 ---
 
 ::: tip Thank You
-All sponsorships will be used to support the development and maintenance of this project, including online ffmpeg, stream save, documentation, online services, and domain costs. Thank you for your support!
+All sponsorships will be used to support the development and maintenance of this project, including the online ffmpeg service, download-while-playing, documentation, online service and domain costs. Thank you for your support!
 :::

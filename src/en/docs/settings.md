@@ -2,48 +2,48 @@
 
 ## Extension and Type Matching Rules
 
-Determines how the browser handles received files.
+The browser judges the file when it is received.
 
-![Capture Extensions](/assets/extension.png)
+![Capture Extension](/assets/extension.png)
 
-![Capture Types](/assets/type.png)
+![Capture Type](/assets/type.png)
 
-Capture types, also known as [MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types) types. Some websites don't provide correct file extensions, so MIME types are used to identify files. Subtypes support the `*` wildcard.
+The capture type, also known as [MIME](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/MIME_types) extension type. Some websites do not provide the correct file extension, so the MIME extension type is needed to judge the file. The subtype supports the wildcard `*`.
 
-Supports relational operators: `> >= < <= = !=` and range expressions. Size units: `B KB MB GB`\
-Examples:
+Relational operators are allowed, supporting `> >= < <= = !=` as well as range expressions. Capacity units support `B KB MB GB`\
+For example:
 
-`>= 200KB` — resources larger than or equal to 200KB
+`>= 200KB` resources greater than or equal to 200KB
 
-`< 1GB` — resources smaller than 1GB
+`< 1GB` resources less than 1GB
 
-`!=500KB` — resources not equal to 500KB
+`!=500KB` resources not equal to 500KB
 
-`500-1024 MB` — resources between 500MB and 1GB
+`500-1024 MB` resources in the range of 500MB to 1GB
 
 ## Regex Matching
 
-If some resources have no extension or MIME type, you can use regex to match URLs, or use regex to filter and block specific resources.
+If some resources have no extension or MIME type, you can use regex to match URLs, or use regex matching to filter and block resources.
 
 ![Regex Matching](/assets/regex.png)
 
-**Extension** — cat-catch cannot determine the resource type from regex matches, so you need to specify an extension. If left blank, it will try to extract the extension from the URL. Since many URLs have no extension, the type may remain unknown, and the parser entry or play icon won't appear on the popup page.
+**Extension** Resources matched by regex cannot know the resource type and extension, so a posterior extension needs to be specified. If left empty, it will try to extract the extension from the URL. Since many URLs have no extension, the type may ultimately be unknown, and the corresponding parser entry or play icon cannot be displayed on the popup page.
 
-**Block Resources** — block resources you don't want to capture.
+**Block Resources** You can block certain resources you don't want to capture.
 
 ::: info
-Regex matching is inefficient. Minimize its use to avoid excessive resource consumption.
+Regex matching is inefficient. Minimize the use of regex to avoid excessive resource usage.
 :::
 
 ## Block URLs
 
-If you don't need the extension on certain websites, you can set URLs with wildcard support, e.g. `https://x.com/*`
+If you don't need the extension on certain websites, you can set URLs with wildcard support, such as `https://x.com/*`
 
-Enable the `Set as whitelist` option to switch the list to a whitelist — the extension will only work on URLs in the list.
+Enable the `Set as Whitelist` option to change the list to a whitelist. The extension will only work normally on URLs in the whitelist.
 
 ## Copy Options
 
-Click the copy button on the popup page to copy customized content, convenient for use with third-party tools.
+Click the copy button on the popup page. The copied content can be customized for your convenience to use with third-party tools directly.
 
 ![Copy Options](/assets/copy.png)
 
@@ -51,59 +51,59 @@ Click the copy button on the popup page to copy customized content, convenient f
 
 ![m3u8dl Custom Protocol](/assets/m3u8dl.png)
 
-**See the [m3u8dl](m3u8dl) chapter for usage details.**
+**For detailed usage, see the [m3u8dl](m3u8dl) chapter**
 
-## Tag System / Replace Keywords (2.3.1+) {#keywords}
+## Tag System / Replace Keywords {#keywords}
 
-![Replace Tags](/assets/replace.png)
+![Replace Tag Screenshot](/assets/replace.png)
 
-Used for keyword replacement in Copy, Data Sending, URL Protocol m3u8dl, Invoke Program, Replace Tags, etc. Tags are case-sensitive.
+Used for keyword replacement in Copy, Data Send, URL Protocol m3u8dl, Invoke Program, Replace Tags, etc. Tags are case-sensitive.
 
-**See the [tag](tag) chapter for details.**
+**For details, see the [Tag System / Replace Keywords](tag) chapter**
 
 ### Custom Save Filename
 
-Enable the `Use custom filename to save files` option in **Other Settings**. You can create directories, e.g. `${title}/${fullFileName}` — the file will be stored in a folder named after the title.
+You need to enable the `Use Custom Filename to Save File` option in **Other Settings**. You can create directories, e.g., `${title}/${fullFileName}` will finally be stored in a folder created with the title.
 
 ## Invoke Local Program
 
-**See the [Invoke Local Program](invoke) chapter for usage details.**
+**For detailed usage, see the [Invoke Local Program](invoke) chapter**
 
 ## Other Settings
 
 ![Other Settings](/assets/other-settings.png)
 
-### Never use cat-catch downloader
+### Never Enable Cat Catch Downloader
 
-When downloading a file and the resource server rejects the request, cat-catch will reopen its built-in downloader with the Referer header to retry. If you use a third-party download tool, enable this option to prevent the cat-catch downloader from being invoked.
+Cat Catch has a built-in simple downloader that can download files with the original request headers. When the browser's built-in downloader fails, it will automatically call the Cat Catch downloader to re-download the file to ensure success. If you use a third-party download tool, it may cause conflicts. You can enable this option to prevent the Cat Catch downloader from being called.
 
-### Use local player protocol to open video preview {#player-protocol}
+### Use Local Player Protocol to Open Video Preview {#player-protocol}
 
-Some local players support invocation protocols, e.g. PotPlayer. Select PotPlayer from the `Protocol Template` dropdown — clicking the play button on the popup page will directly invoke the local player to preview. Mobile users are advised to use `System Share` mode.
+Some local players support invocation protocols, such as PotPlayer. Select PotPlayer in the `Protocol Template`. Clicking the play button on the popup page will directly invoke the local player for preview. Mobile users are advised to use the `System Share` mode.
 
-### Clear captured data on refresh / navigation
+### Clear Current Tab's Captured Data on Refresh or Navigate to New Page
 
-Choose the data clearing mode:
+Select the captured resource clearing mode:
 
-- **Never clear** — data is never cleared until the user closes the tab.
-- **Normal clear** — data is cleared when the user manually refreshes the page or clicks a link to a new page.
-- **More frequent** — more aggressive than Normal clear, e.g. switching to a new video also triggers clearing.
+- No Clearing: Never clear data under any circumstances until the user closes the current page's tab.
+- Normal Clearing: When the user actively refreshes the page or clicks to navigate to a new page, the currently captured data will be cleared.
+- More Frequent: Based on normal clearing, it is more sensitive. For example, switching to a new video will also trigger clearing.
 
-Some websites refresh the page multiple times automatically, causing captured data to be cleared. If a site fails to capture resources, try switching to **Never clear**.
+Some websites refresh the page multiple times by themselves, causing the captured data to be cleared. When encountering websites where resources cannot be sniffed, please first try changing the clearing mode to No Clearing.
 
-### Nested online ffmpeg
+### Nested Online ffmpeg
 
-If data transfer fails during [online ffmpeg](online-ffmpeg) processing for various complex reasons, enable this option to use a nested online ffmpeg instance as a workaround.
+When using [online ffmpeg](online-ffmpeg), data transmission may fail due to various complex reasons, and the online ffmpeg does not receive the data. You can enable this option to use the nested online ffmpeg to solve this.
 
 ## Send Data {#send}
 
-Click the send button on the popup page to send data to a custom third-party endpoint. The request body must be in JSON format.
+Click the send button on the popup page to customize sending data to a third-party address. Ensure the request body is in JSON format.
 
-`${action}` is a special tag representing different data types: `catch` for captured data, `addKey` for key data.
+`${action}` is a special tag representing different data types. If it is captured data, it is replaced with the `catch` string. If it is key data, it is replaced with the `addKey` string.
 
-If `${action}` is `catch`, `${data}` is the file object converted to JSON.
+If `${action}` is `catch`, ${data} is the file object converted to JSON format content.
 
-If `${action}` is `addKey`, `${data}` is a base64-encoded key string.
+If `${action}` is `addKey`, ${data} is the key base64 string.
 
 Example: `{"action": "${action}", "data": ${data}, "tabId": "${tabId}"}`
 
@@ -113,26 +113,26 @@ Example: `{"action": "${action}", "data": ${data}, "tabId": "${tabId}"}`
     action: "catch",
     data: {
         name: "filename",
-        url: "resource URL",
-        size: "file size"
+        url: "resource address",
+        size: "resource size"
         requestHeaders: {
-            referer: "may not exist",
-            origin: "may not exist",
-            cookie: "may not exist"
+            referer: "may also not exist",
+            origin: "may also not exist",
+            cookie: "may also not exist"
         }
-        ...: "other fields"
+        ...: "others"
     },
-    tabId: "source tab ID"
+    tabId: "tab ID of the data source"
 }
 
-// JSON when a suspected key is received
+// JSON receives a suspected key
 {
     action: "addKey",
     data: "base64 data",
-    tabId: "source tab ID"
+    tabId: "tab ID of the data source"
 }
 ```
 
 ::: info
-The data sending feature is experimental. The JSON structure may vary across versions.
+The data sending feature is in testing. The JSON structure may vary across different versions.
 :::

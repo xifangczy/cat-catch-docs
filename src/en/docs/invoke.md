@@ -1,30 +1,26 @@
----
-description: Requires cat-catch v2.5.3+
----
-
 # Invoke Local Program
 
 ![Invoke Program Icon](/assets/invoke.svg)
 
-Enable **Invoke Program** in Settings. An invoke button appears on the resource list page — click to open your configured protocol.
+Settings - Enable Invoke Program. An invoke button will appear on the resource list page. Click it to open the protocol you have configured.
 
-If the program you want to invoke doesn't have a URL Protocol, you can use [https://github.com/xifangczy/URLProtocol](https://github.com/xifangczy/URLProtocol) to register one.
+If the program you want to enable does not have a URL Protocol, you can use [https://github.com/xifangczy/URLProtocol](https://github.com/xifangczy/URLProtocol) to register one for it.
 
-Example using [https://github.com/nilaoda/N_m3u8DL-RE](https://github.com/nilaoda/N_m3u8DL-RE):
+Take [https://github.com/nilaoda/N_m3u8DL-RE](https://github.com/nilaoda/N_m3u8DL-RE) as an example.
 
-Download both tools and place them in the same folder.
+Download both tools and place them together.
 
-Open URLProtocol, enter `m3u8dlre` as the protocol name, and select `N_m3u8DL-RE.exe` as the target.
+Open URLProtocol, enter `m3u8dlre` as the protocol name, and select `N_m3u8DL-RE.exe` as the invocation target.
 
-cat-catch → Settings → Invoke Program → Parameter Settings:
+Cat Catch - Settings - Invoke Program - Parameter Settings
 
 ```
 m3u8dlre:"${url}" --save-dir "%USERPROFILE%\Downloads" --del-after-done --save-name "${title}_${now}" --auto-select ${referer|exists:'-H "Referer: *"'}
 ```
 
-Setup is now complete.
+Now all settings are complete.
 
-Click the invoke icon to launch N_m3u8DL-RE.
+To invoke N_m3u8DL-RE, simply click the invoke icon.
 
 ## Examples:
 
@@ -32,16 +28,16 @@ Click the invoke icon to launch N_m3u8DL-RE.
 
 `thunder://${url|exists:"AA*ZZ"|to:base64}`
 
-### Use PotPlayer to Play
+### Play with PotPlayer
 
 `potplayer:${url} ${referer|exists:'/referer="*"'}`
 
 ## Test Parameters
 
-Add the `--cat-catch-test` parameter to display the program and parameters before invocation.
+Add the parameter `--cat-catch-test` to display a prompt showing the program and parameters that are about to be invoked.
 
-For example: `m3u8dlre:"${url}" --cat-catch-test`
+For example, `m3u8dlre:"${url}" --cat-catch-test`
 
 ::: warning
-Chrome's custom URL Protocol does not allow double slashes "//" in the protocol name when parameters contain ${url}.
+For Chrome custom URL Protocols, when the parameters contain ${url}, the protocol name must not contain double slashes "//"
 :::
