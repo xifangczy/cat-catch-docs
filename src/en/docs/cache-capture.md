@@ -1,16 +1,12 @@
----
-description: cat-catch 2.0 adds active detection capabilities.
----
-
 # Deep Search / Cache Capture
 
-## **Deep Search** {#deep-search}
+## Deep Search {#deep-search}
 
 If cat-catch cannot sniff resources by default, trying Deep Search is strongly recommended. It intercepts key functions to analyze hidden M3U8 or MPD files in the website. It also caches M3U8 file content (solving the issue of some sites where M3U8 URLs can only be opened once) and collects all suspected M3U8 keys. [#maybekey](m3u8parse#maybekey)
 
 ## Capture / Record
 
-### **Cache Capture** {#cache-capture}
+### Cache Capture {#cache-capture}
 
 Captures video cache data. Use this when Deep Search still cannot capture resources. The downside is that you need to wait for the video to fully buffer. The advantage is that it supports almost all websites. You can use speed playback or drag the progress bar — just buffer the entire video and it will prompt when capture is complete. Only one video can be captured at a time, otherwise data will be corrupted.
 
@@ -38,11 +34,11 @@ When using cache capture consecutively, wait for the video to finish playing and
 **cat-catch strongly advises against using cache capture to record live streams.** The extension stores data in memory — if it crashes, the data is lost forever. For your precious data, use cat-catch to get the live stream URL and use a third-party tool to record and save it.
 :::
 
-### **Video Recording**
+### More Features - Video Recording
 
 Uses JavaScript's built-in recording function to record video. Can record some live streaming sites. It records all your actions on the video, including play, pause, drag, and switch. Recording requires a stronger CPU, otherwise it may lag. **Cannot record DRM-protected videos.**
 
-### **Screen Capture** {#screen-capture}
+### More Features - Screen Capture {#screen-capture}
 
 Uses screen sharing to record video. Requires Chromium 104+.
 
@@ -56,10 +52,10 @@ Select **Screen Capture**. A recording area frame appears on the page. Adjust th
 Older browser versions may have a bug where no audio is recorded. Please upgrade your browser.
 :::
 
-### Record WebRTC
+### More Features - Record WebRTC
 
-WebRTC live streams are commonly found in online video chat sites. You can try this script. Since this technology doesn't have conventional video streams, cache capture will not work.
+WebRTC live streams are commonly found in online video chat sites. You can try this script.
 
-::: info
-Firefox does not support any capture scripts.
+::: info Compatibility
+All features above require Chromium 102+ and Firefox 128+.
 :::

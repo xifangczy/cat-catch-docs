@@ -1,7 +1,7 @@
 # Using the m3u8dl:// Protocol
 
 ## N_m3u8DL-RE
-[N_m3u8DL-RE](https://github.com/nilaoda/N_m3u8DL-RE) is a cross-platform DASH/HLS/MSS download tool. Supports VOD and live streaming (DASH/HLS). Currently supports protocol invocation.
+[N_m3u8DL-RE](https://github.com/nilaoda/N_m3u8DL-RE) is a cross-platform DASH/HLS/MSS download tool. Supports VOD and live streaming (DASH/HLS). Does not natively support URL protocol invocation.
 
 ## URLProtocol
 [URLProtocol](https://github.com/xifangczy/URLProtocol) is a tool for registering custom URL protocols. It can register any program as a URL protocol for easy invocation.

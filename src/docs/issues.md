@@ -11,5 +11,5 @@ Github 提交issue [https://github.com/xifangczy/cat-catch/issues](https://githu
 邮箱 xifangczy@gmail.com
 
 ::: danger
-**一定提供涉及网址否则无法帮助到你，如果需要账号登陆，请使用邮件方式发送给我。**
+**一定提供涉及网址否则无法帮助到你，如果需要账号登陆，请使用邮件方式发送给我。否则无法处理你的问题。**
 :::

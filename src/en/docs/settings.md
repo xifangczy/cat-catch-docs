@@ -1,6 +1,6 @@
 # Settings
 
-## **Extension and Type Matching Rules**
+## Extension and Type Matching Rules
 
 Determines how the browser handles received files.
 
@@ -10,9 +10,7 @@ Determines how the browser handles received files.
 
 Capture types, also known as [MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/MIME_types) types. Some websites don't provide correct file extensions, so MIME types are used to identify files. Subtypes support the `*` wildcard.
 
-Starting from version 2.6.8, the size filter supports relational operators.
-
-Supports `> >= < <= = !=` and range expressions. Size units: `B KB MB GB`\
+Supports relational operators: `> >= < <= = !=` and range expressions. Size units: `B KB MB GB`\
 Examples:
 
 `>= 200KB` — resources larger than or equal to 200KB
@@ -23,9 +21,9 @@ Examples:
 
 `500-1024 MB` — resources between 500MB and 1GB
 
-## **Regex Matching**
+## Regex Matching
 
-Regex matching is performed on the URL before the browser opens it, so it has the highest priority.
+If some resources have no extension or MIME type, you can use regex to match URLs, or use regex to filter and block specific resources.
 
 ![Regex Matching](/assets/regex.png)
 
@@ -41,33 +39,35 @@ Regex matching is inefficient. Minimize its use to avoid excessive resource cons
 
 If you don't need the extension on certain websites, you can set URLs with wildcard support, e.g. `https://x.com/*`
 
-Enable the **Whitelist mode** option to switch the list to a whitelist — the extension will only work on URLs in the list.
+Enable the `Set as whitelist` option to switch the list to a whitelist — the extension will only work on URLs in the list.
 
 ## Copy Options
 
-For use with third-party tools. Click the copy button on the popup page to copy the exact string you need.
+Click the copy button on the popup page to copy customized content, convenient for use with third-party tools.
 
 ![Copy Options](/assets/copy.png)
 
-### URL Protocol m3u8dl
+### m3u8dl Custom Protocol
 
-![](/assets/m3u8dl.png)
+![m3u8dl Custom Protocol](/assets/m3u8dl.png)
 
-See [m3u8dl](m3u8dl) for details.
+**See the [m3u8dl](m3u8dl) chapter for usage details.**
 
-## Replace Tags
+## Tag System / Replace Keywords (2.3.1+) {#keywords}
 
-![](/assets/replace.png)
+![Replace Tags](/assets/replace.png)
+
+Used for keyword replacement in Copy, Data Sending, URL Protocol m3u8dl, Invoke Program, Replace Tags, etc. Tags are case-sensitive.
+
+**See the [tag](tag) chapter for details.**
 
 ### Custom Save Filename
 
 Enable the `Use custom filename to save files` option in **Other Settings**. You can create directories, e.g. `${title}/${fullFileName}` — the file will be stored in a folder named after the title.
 
-## Tag System / Replace Keywords (2.3.1+) {#keywords}
+## Invoke Local Program
 
-Used for keyword replacement in Copy, Data Sending, URL Protocol m3u8dl, Invoke Program, Replace Tags, etc. Tags are case-sensitive.
-
-See [tag](tag) for details.
+**See the [Invoke Local Program](invoke) chapter for usage details.**
 
 ## Other Settings
 
@@ -79,41 +79,25 @@ When downloading a file and the resource server rejects the request, cat-catch w
 
 ### Use local player protocol to open video preview {#player-protocol}
 
-Some local players support URL protocols, e.g. PotPlayer supports `potplayer://`. cat-catch can use this protocol to directly invoke the player to play captured resources.
-
-Supports tag replacement.
-
-The `Protocol Template` dropdown on the right provides common player protocols. Only some Android browsers support the `intent:` protocol, so mobile users are advised to use `System Share` mode instead.
-
-To disable the protocol, simply clear the field.
-
-::: info
-System Share mode requires a minimum browser version.
-
-See [https://caniuse.com/mdn-api\_navigator\_share](https://caniuse.com/mdn-api_navigator_share) for details.
-:::
-
-### **m3u8dl:// Protocol Invocation**
-
-See the [m3u8dl](m3u8dl) tutorial for details.
+Some local players support invocation protocols, e.g. PotPlayer. Select PotPlayer from the `Protocol Template` dropdown — clicking the play button on the popup page will directly invoke the local player to preview. Mobile users are advised to use `System Share` mode.
 
 ### Clear captured data on refresh / navigation
 
-Three modes: Never clear, Normal clear, Frequent clear.
+Choose the data clearing mode:
 
-**Frequent clear** is more aggressive — e.g. on video sites, it clears when you click to watch the next video.
+- **Never clear** — data is never cleared until the user closes the tab.
+- **Normal clear** — data is cleared when the user manually refreshes the page or clicks a link to a new page.
+- **More frequent** — more aggressive than Normal clear, e.g. switching to a new video also triggers clearing.
 
-**Normal clear** strictly follows user-initiated actions: manual refresh or clicking a link to a new page.
-
-Frequent clear may cause resources to be cleared immediately after being sniffed. If a site fails to capture resources, try switching to **Normal** or **Never clear**.
+Some websites refresh the page multiple times automatically, causing captured data to be cleared. If a site fails to capture resources, try switching to **Never clear**.
 
 ### Nested online ffmpeg
 
-If data transfer fails during online ffmpeg processing for various complex reasons, enable this option to use a nested online ffmpeg instance as a workaround.
+If data transfer fails during [online ffmpeg](online-ffmpeg) processing for various complex reasons, enable this option to use a nested online ffmpeg instance as a workaround.
 
 ## Send Data {#send}
 
-Send data to a custom third-party endpoint. The request body must be in JSON format.
+Click the send button on the popup page to send data to a custom third-party endpoint. The request body must be in JSON format.
 
 `${action}` is a special tag representing different data types: `catch` for captured data, `addKey` for key data.
 

@@ -22,8 +22,6 @@ m3u8dlre:"${url}" --save-dir "%USERPROFILE%\Downloads" --del-after-done --save-n
 
 想要调用 N_m3u8DL-RE 点击调用图标皆可。
 
-
-
 ## 示例：
 
 ### 启用迅雷下载

@@ -1,10 +1,7 @@
----
-description: An online helper tool for changing media container formats.
----
-
 # Online ffmpeg
 
 Tool link: [https://ffmpeg.bmmmd.com/](https://ffmpeg.bmmmd.com/)
+Overseas server: [https://ffmpeg.94cat.com/](https://ffmpeg.94cat.com/)
 
 The first use downloads ffmpeg (~30MB). Please be patient — it will be cached in the browser afterwards.
 
@@ -39,6 +36,8 @@ All file transfers and messages use LAN only — no remote servers are involved.
 The remote server only helps users on the same LAN discover each other and assign random usernames, then exits.
 
 Powered by the open-source project snapdrop.
+
+The overseas server does not support LAN file transfer.
 :::
 
 ## Command List

@@ -1,7 +1,3 @@
----
-description: Version 2.6.0+ — Click the popup button
----
-
 # Popup Page / Filter Page / Preview Page
 
 ![](/assets/filter-page.png)
@@ -29,5 +25,5 @@ A single page supports previewing up to 128 files simultaneously (depending on y
 **Debug:** You don't need this.
 
 ::: warning
-cat-catch clears data belonging to the current website when the site is closed. Do not close the captured website while using this feature to preview files.
+Do not close the captured website while using this feature to preview files.
 :::
