@@ -60,13 +60,13 @@ export default defineConfig({
             text: "📌 其他",
             items: [
               { text: "捐赠 ❤️ 赞助", link: "/docs/sponsor" },
-              { text: "强制屏蔽网站", link: "/docs/blockedsite" },
-              { text: "Bug 提交", link: "/docs/issues" },
               { text: "常见问题", link: "/docs/faq" },
+              { text: "Bug 提交", link: "/docs/issues" },
               {
                 text: "更新日志",
                 link: "https://github.com/xifangczy/cat-catch/blob/master/CHANGELOG.md",
               },
+              { text: "强制屏蔽网站", link: "/docs/blockedsite" },
             ],
           },
         ],
@@ -144,13 +144,13 @@ export default defineConfig({
             text: "📌 Other",
             items: [
               { text: "Donate ❤️ Sponsor", link: "/en/docs/sponsor" },
-              { text: "Blocked Websites", link: "/en/docs/blockedsite" },
-              { text: "Bug Report", link: "/en/docs/issues" },
               { text: "FAQ", link: "/en/docs/faq" },
+              { text: "Bug Report", link: "/en/docs/issues" },
               {
                 text: "Changelog",
                 link: "https://github.com/xifangczy/cat-catch/blob/master/CHANGELOG.md",
               },
+              { text: "Blocked Websites", link: "/en/docs/blockedsite" },
             ],
           },
         ],

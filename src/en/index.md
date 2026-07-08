@@ -14,6 +14,9 @@ hero:
       text: Quick Start
       link: /en/docs/install
     - theme: alt
+      text: 中文
+      link: /
+    - theme: alt
       text: GitHub
       link: https://github.com/xifangczy/cat-catch
 
