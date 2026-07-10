@@ -10,9 +10,9 @@
 
 | 技术      | 版本                          |
 | --------- | ----------------------------- |
-| VitePress | 2.0.0-alpha.17                |
-| Node.js   | 22+                           |
-| pnpm      | 9+                            |
+| VitePress | 2.0.0-alpha.18                |
+| Node.js   | 24+                           |
+| pnpm      | 11+                           |
 | 部署      | GitHub Pages + GitHub Actions |
 
 ## 📁 目录结构
