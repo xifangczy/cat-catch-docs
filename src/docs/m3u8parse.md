@@ -146,7 +146,3 @@ https://bmmmd.com/003.ts
 想设置其他请求头，需使用JSON格式 例如
 
 `{"origin":"https://www.bmmmd.com","referer":"https://www.bmmmd.com/test.m3u8"}`
-
-::: info
-严格JSON格式，属性必须使用双引号。
-:::

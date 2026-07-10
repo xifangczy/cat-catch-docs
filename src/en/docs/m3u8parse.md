@@ -146,7 +146,3 @@ For all the above operations, if errors occur, you should input the Referer requ
 To set other request headers, use JSON format, for example
 
 `{"origin":"https://www.bmmmd.com","referer":"https://www.bmmmd.com/test.m3u8"}`
-
-::: info
-Strict JSON format. Properties must use double quotes.
-:::
