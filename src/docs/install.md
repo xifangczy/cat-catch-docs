@@ -5,25 +5,25 @@
     <div class="card-icon">🌐</div>
     <div class="card-title">Chrome 应用商店</div>
     <div class="card-desc">适用于 Chrome、Edge 及所有 Chromium 浏览器</div>
-    <a href="https://chrome.google.com/webstore/detail/jfedfbgedapdagkghmgibemcoggfppbb" class="card-btn">前往安装</a>
+    <a href="https://chrome.google.com/webstore/detail/jfedfbgedapdagkghmgibemcoggfppbb" class="card-btn" target="_blank">前往安装</a>
   </div>
   <div class="card">
     <div class="card-icon">🌊</div>
     <div class="card-title">Edge 应用商店</div>
     <div class="card-desc">Microsoft Edge 浏览器适用</div>
-    <a href="https://microsoftedge.microsoft.com/addons/detail/oohmdefbjalncfplafanlagojlakmjci" class="card-btn">前往安装</a>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/oohmdefbjalncfplafanlagojlakmjci" class="card-btn" target="_blank">前往安装</a>
   </div>
   <div class="card">
     <div class="card-icon">🦊</div>
     <div class="card-title">Firefox 附加组件</div>
     <div class="card-desc">Mozilla Firefox 浏览器适用</div>
-    <a href="https://addons.mozilla.org/addon/cat-catch/" class="card-btn">前往安装</a>
+    <a href="https://addons.mozilla.org/addon/cat-catch/" class="card-btn" target="_blank">前往安装</a>
   </div>
   <div class="card">
     <div class="card-icon">🐱</div>
     <div class="card-title">GitHub 源码</div>
     <div class="card-desc">查看源码，手动安装或参与贡献</div>
-    <a href="https://github.com/xifangczy/cat-catch" class="card-btn">前往仓库</a>
+    <a href="https://github.com/xifangczy/cat-catch" class="card-btn" target="_blank">前往仓库</a>
   </div>
 </div>
 <div class="qr-box">

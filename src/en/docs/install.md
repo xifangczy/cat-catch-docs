@@ -5,25 +5,25 @@
     <div class="card-icon">🌐</div>
     <div class="card-title">Chrome Web Store</div>
     <div class="card-desc">For Chrome, Edge, and all Chromium-based browsers</div>
-    <a href="https://chrome.google.com/webstore/detail/jfedfbgedapdagkghmgibemcoggfppbb" class="card-btn">Install</a>
+    <a href="https://chrome.google.com/webstore/detail/jfedfbgedapdagkghmgibemcoggfppbb" class="card-btn" target="_blank">Install</a>
   </div>
   <div class="card">
     <div class="card-icon">🌊</div>
     <div class="card-title">Edge Add-ons</div>
     <div class="card-desc">For Microsoft Edge browser</div>
-    <a href="https://microsoftedge.microsoft.com/addons/detail/oohmdefbjalncfplafanlagojlakmjci" class="card-btn">Install</a>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/oohmdefbjalncfplafanlagojlakmjci" class="card-btn" target="_blank">Install</a>
   </div>
   <div class="card">
     <div class="card-icon">🦊</div>
     <div class="card-title">Firefox Add-ons</div>
     <div class="card-desc">For Mozilla Firefox browser</div>
-    <a href="https://addons.mozilla.org/addon/cat-catch/" class="card-btn">Install</a>
+    <a href="https://addons.mozilla.org/addon/cat-catch/" class="card-btn" target="_blank">Install</a>
   </div>
   <div class="card">
     <div class="card-icon">🐱</div>
     <div class="card-title">GitHub Source</div>
     <div class="card-desc">View source code, install manually, or contribute</div>
-    <a href="https://github.com/xifangczy/cat-catch" class="card-btn">Go to Repository</a>
+    <a href="https://github.com/xifangczy/cat-catch" class="card-btn" target="_blank">Go to Repository</a>
   </div>
 </div>
 <div class="qr-box">

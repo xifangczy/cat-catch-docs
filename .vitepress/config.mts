@@ -65,6 +65,7 @@ export default defineConfig({
               {
                 text: "更新日志",
                 link: "https://github.com/xifangczy/cat-catch/blob/master/CHANGELOG.md",
+                target: "_blank",
               },
               { text: "强制屏蔽网站", link: "/docs/blockedsite" },
             ],
@@ -149,6 +150,7 @@ export default defineConfig({
               {
                 text: "Changelog",
                 link: "https://github.com/xifangczy/cat-catch/blob/master/CHANGELOG.md",
+                target: "_blank",
               },
               { text: "Blocked Websites", link: "/en/docs/blockedsite" },
             ],
