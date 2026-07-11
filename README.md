@@ -1,3 +1,5 @@
+[简体中文](./README.md) | [English](./README-en.md)
+
 # 猫抓 (cat-catch) 文档站
 
 [猫抓 (cat-catch)](https://github.com/xifangczy/cat-catch) 浏览器扩展的官方文档，基于 [VitePress](https://vitepress.dev) 构建，支持中英双语。
@@ -79,28 +81,79 @@ MIT
 
 ---
 
-## English
+## 🌍 翻译贡献
 
-The official documentation site for the [cat-catch](https://github.com/xifangczy/cat-catch) browser extension, built with [VitePress](https://vitepress.dev), supporting both Chinese and English.
+我们欢迎将文档翻译成更多语言。本站点使用的语言代码与 [Chrome 扩展 i18n API](https://developer.chrome.com/docs/extensions/reference/api/i18n?hl=zh-cn#locales) 保持一致，方便熟悉 Chrome 扩展国际化的贡献者上手。
 
-### Quick Start
+### 如何新增一种语言
 
-```bash
-pnpm install      # Install dependencies
-pnpm docs:dev     # Start dev server
-pnpm docs:build   # Build for production
-pnpm docs:preview # Preview the build
-```
+1. **复制英文目录** —— 复制 `src/en/` 目录，新目录名使用目标语言代码（例如 `src/ja/`、`src/ko/`、`src/fr/`）。
+2. **翻译** —— 翻译新目录下所有 `.md` 文件。
+3. **注册语言** —— 在 `.vitepress/config.mts` 的 `locales` 中新增一项：
 
-### Structure
+   ```ts
+   import { defineConfig } from "vitepress";
 
-- `src/docs/` — Chinese documentation (root locale)
-- `src/en/docs/` — English documentation (`/en/` prefix)
-- `src/public/assets/` — Image resources
-- `.vitepress/config.mts` — Site configuration (srcDir, locales, sidebar, search)
-- `.github/workflows/deploy.yml` — Auto-deploy to GitHub Pages on push to `main`
+   export default defineConfig({
+     // ...
+     locales: {
+       root: { /* ... */ },
+       en: { /* ... */ },
+       ja: {
+         label: "日本語",
+         lang: "ja",
+         link: "/ja/",
+         description: "ウェブメディア取得ブラウザ拡張",
+         themeConfig: {
+           nav: [ /* 翻译后的导航栏 */ ],
+           sidebar: [ /* 翻译后的侧边栏，链接前缀改为 /ja/ */ ],
+           docFooter: { prev: "前へ", next: "次へ" },
+           outline: { label: "On This Page" },
+           sidebarMenuLabel: "メニュー",
+           returnToTopLabel: "トップへ戻る",
+         },
+       },
+     },
+     themeConfig: {
+       // ...
+       search: {
+         provider: "local",
+         options: {
+           locales: {
+             ja: {
+               translations: {
+                 button: { buttonText: "ドキュメントを検索", buttonAriaLabel: "ドキュメントを検索" },
+                 modal: {
+                   noResultsText: "結果が見つかりません",
+                   resetButtonTitle: "検索条件をクリア",
+                   footer: { selectText: "選択", navigateText: "移動", closeText: "閉じる" },
+                 },
+               },
+             },
+           },
+         },
+       },
+     },
+   });
+   ```
 
-### Related Repositories
+   > **注意：** locale 键名（例如 `ja`）同时作为 URL 前缀（`/ja/`）。对于带下划线的地区代码（如 `zh_TW`、`pt_BR`），目录名与 locale 键名都使用该完整代码，对应 URL 形如 `/zh_TW/`。
 
-- [cat-catch](https://github.com/xifangczy/cat-catch) — The browser extension
-- [cat-catch-docs](https://cat-catch.94cat.com/) — This documentation site
+4. **添加语言链接** —— 在 `README.md` 与 `README-en.md` 顶部的语言切换栏追加新语言：
+   ```
+   [简体中文](./README.md) | [English](./README-en.md) | [日本語](./README-ja.md)
+   ```
+
+### 语言代码速查表
+
+请使用 [Chrome i18n 语言代码列表](https://developer.chrome.com/docs/extensions/reference/api/i18n?hl=zh-cn#locales) 中的代码。常用代码：
+
+| 代码    | 语言                  | 代码    | 语言                     |
+| ------- | --------------------- | ------- | ------------------------ |
+| `en`    | English               | `ja`    | 日本語（日语）           |
+| `ko`    | 한국어（韩语）        | `fr`    | Français（法语）         |
+| `de`    | Deutsch（德语）       | `es`    | Español（西班牙语）      |
+| `pt_BR` | Português (Brasil)    | `ru`    | Русский（俄语）          |
+| `it`    | Italiano（意大利语）  | `nl`    | Nederlands（荷兰语）     |
+| `zh_TW` | 中文（繁體）          | `vi`    | Tiếng Việt（越南语）     |
+| `tr`    | Türkçe（土耳其语）    | `id`    | Bahasa Indonesia         |
