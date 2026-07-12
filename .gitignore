@@ -4,6 +4,7 @@ node_modules/
 # VitePress build cache and output
 .vitepress/cache/
 .vitepress/dist/
+.workbuddy/
 
 # Temporary files
 *.log
