@@ -104,6 +104,8 @@ After merging, directly send to the online ffmpeg website file area without auto
 
 ## Parser Entry
 
+![Parser Entry](/assets/m3u8index.png)
+
 Enter the parser entry via More Features - M3U8 Parser.
 
 Supports input of m3u8 links / m3u8 file content / list of segment URLs for parsing.
