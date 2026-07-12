@@ -22,6 +22,9 @@
 | **`${time}`** | 时间 | 21'30'55 |
 | `${shareApi}` | 系统分享API 只允许在 [#player-protocol](settings#player-protocol) |  |
 | `${range}` | 生成范围标签 只允许在m3u8解析器入口使用 详情查看 [m3u8解析](m3u8parse) |  |
+| `${tabId}` | 资源所属的浏览器Tab ID | 520 |
+| `${data}` | 资源原始数据, JSON格式 | {"url":"https://bmmmd.com/test.mp4", ...} |
+| `${action}` | 只允许在[数据发送](settings#send)中使用<br>如果是资源, 该标签会被替换为 'catch' <br>如果是密钥, 该标签会被替换为 'addKey' | catch <br> addKey |
 
 ---
 

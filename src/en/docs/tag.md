@@ -22,6 +22,9 @@
 | **`${time}`** | Time | 21'30'55 |
 | `${shareApi}` | System share API, only allowed in [#player-protocol](settings#player-protocol) |  |
 | `${range}` | Range generation tag, only allowed in m3u8 parser entry. For details, see [m3u8 Parse](m3u8parse) |  |
+| `${tabId}` | The browser Tab ID the resource belongs to | 520 |
+| `${data}` | Resource data, in JSON format | {"url":"https://bmmmd.com/test.mp4", ...} |
+| `${action}` | Only allowed in [Data Transmission](settings#send)<br>If it is a resource, this tag is replaced with 'catch'<br>If it is a key, this tag is replaced with 'addKey' | catch <br> addKey |
 
 ---
 

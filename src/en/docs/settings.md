@@ -132,7 +132,3 @@ Example: `{"action": "${action}", "data": ${data}, "tabId": "${tabId}"}`
     tabId: "tab ID of the data source"
 }
 ```
-
-::: info
-The data sending feature is in testing. The JSON structure may vary across different versions.
-:::
