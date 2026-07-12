@@ -54,6 +54,7 @@ export default defineConfig({
                 link: "/docs/tampermonkey",
               },
               { text: "媒体控制", link: "/docs/media-control" },
+              { text: "Aria2 RPC", link: "/docs/aria2" },
             ],
           },
           {
@@ -139,6 +140,7 @@ export default defineConfig({
                 link: "/en/docs/tampermonkey",
               },
               { text: "Media Control", link: "/en/docs/media-control" },
+              { text: "Aria2 RPC", link: "/en/docs/aria2" },
             ],
           },
           {
