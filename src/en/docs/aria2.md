@@ -1,6 +1,6 @@
 # Aria2 RPC
 
-Aria2 is a free, open-source, lightweight multi-protocol and multi-platform download tool that supports RPC remote invocation for downloads. After installing Aria2 on a remote computer and enabling RPC, you can submit download tasks from Cat Catch to the remote computer / NAS.
+Aria2 is a free, open-source, lightweight multi-protocol and multi-platform download utility that supports RPC remote access. By installing Aria2 on a remote computer and enabling RPC, you can submit download tasks to a local computer, remote computer, NAS, or other devices using CatCatch.
 
 ## Motrix Next
 

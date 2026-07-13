@@ -2,7 +2,9 @@
 
 ## Deep Search {#deep-search}
 
-If Cat Catch cannot sniff resources by default, it is strongly recommended to try Deep Search first. By intercepting some important functions, it analyzes hidden m3u8 or mpd files on the website. It also tries to cache the m3u8 file content to solve the problem that m3u8 addresses on some websites can only be opened once. And it collects all suspected m3u8 key data [#maybekey](m3u8parse#maybekey)
+If Cat Catch cannot sniff resources by default, it is strongly recommended to try Deep Search first. On the [popup](popup) page, click `Search` to enable it. By intercepting some important functions, it analyzes hidden m3u8 or mpd files on the website. It also tries to cache the m3u8 file content to solve the problem that m3u8 addresses on some websites can only be opened once. And it collects all suspected m3u8 key data [#maybekey](m3u8parse#maybekey)
+
+Deep Search is very resource-intensive and may cause the webpage to fail to open or play videos normally, so it is disabled by default. You can force it to stay always on via `Settings` -> `Script` -> `Always Open Deep Search`.
 
 ## Capture/Record
 
