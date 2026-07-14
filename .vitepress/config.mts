@@ -5,8 +5,17 @@ export default defineConfig({
   base: "/",
   srcDir: "src",
   cleanUrls: true,
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
-
+  head: [
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+    [
+      'script',
+      {
+        defer: '',
+        src: 'https://umami.bmmmd.com/script.js',
+        'data-website-id': 'baf7336a-208d-4179-87a3-877b8464471c'
+      }
+    ]
+  ],
   locales: {
     root: {
       label: "简体中文",
