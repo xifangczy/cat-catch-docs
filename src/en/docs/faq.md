@@ -32,10 +32,6 @@ The script attempts to fetch the M3U8, reconstruct the correct addresses, and se
 
 The resource uses a non-standard encryption method, which currently has no solution. Try [Cache Capture](cache-capture#cache-capture).
 
-## Merged M3U8 Download Shows Only a Single Image / Fragment Files Are in PNG Format
-
-The resource disguises video fragments as images. In the M3U8 parser, check the `Data Preprocessing` option, which will strip out unnecessary image data. Alternatively, use the third-party tool N_m3u8DL-RE to download.
-
 ## Page Crashes During M3U8 Parser Merge Download
 
 The downloaded file may be too large for your memory. Check `Stream While Downloading`. Note that online transcoding cannot be used when this option is enabled.
@@ -55,3 +51,7 @@ If `Stream While Downloading` is not enabled, download data is stored in memory.
 ## Custom Filename Not Working
 
 Whether you set a `Custom Save Filename` in the `Replace Tags` settings or use a custom name in the M3U8 parser, the downloaded filename is not what you configured. This may be caused by a third-party download tool or another downloader extension conflicting with the download API. Please disable other downloader extensions.
+
+## Firefox Cannot Capture {#firefox-permission}
+
+Some Firefox versions disable the `Access your data on all websites` permission by default. Right-click the extension icon, go to `Manage Extension` -> `Permissions & Data`, and check the box to enable the `Access your data on all websites` permission.
