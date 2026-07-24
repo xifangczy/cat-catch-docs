@@ -58,10 +58,6 @@ export default defineConfig({
               { text: "m3u8dl 自定义协议", link: "/docs/m3u8dl" },
               { text: "调用本地程序", link: "/docs/invoke" },
               { text: "在线ffmpeg", link: "/docs/online-ffmpeg" },
-              {
-                text: "使用油猴脚本给猫抓发送资源",
-                link: "/docs/tampermonkey",
-              },
               { text: "媒体控制", link: "/docs/media-control" },
               { text: "Aria2 RPC", link: "/docs/aria2" },
             ],
@@ -78,6 +74,16 @@ export default defineConfig({
                 target: "_blank",
               },
               { text: "强制屏蔽网站", link: "/docs/blockedsite" },
+            ],
+          },
+          {
+            text: "🛠️ 开发指南",
+            items: [
+              { text: "翻译", link: "/docs/translate" },
+              {
+                text: "使用油猴脚本给猫抓发送资源",
+                link: "/docs/tampermonkey",
+              },
             ],
           },
         ],
@@ -144,10 +150,6 @@ export default defineConfig({
               { text: "m3u8dl Custom Protocol", link: "/en/docs/m3u8dl" },
               { text: "Invoke Local Program", link: "/en/docs/invoke" },
               { text: "Online ffmpeg", link: "/en/docs/online-ffmpeg" },
-              {
-                text: "Sending Resources via Tampermonkey",
-                link: "/en/docs/tampermonkey",
-              },
               { text: "Media Control", link: "/en/docs/media-control" },
               { text: "Aria2 RPC", link: "/en/docs/aria2" },
             ],
@@ -164,6 +166,16 @@ export default defineConfig({
                 target: "_blank",
               },
               { text: "Blocked Websites", link: "/en/docs/blockedsite" },
+            ],
+          },
+          {
+            text: "🛠️ Development Guide",
+            items: [
+              { text: "Translation", link: "/en/docs/translate" },
+              {
+                text: "Sending Resources via Tampermonkey",
+                link: "/en/docs/tampermonkey",
+              },
             ],
           },
         ],
