@@ -9,14 +9,16 @@
 - 翻译范围文件位于：`/_locales/(语言区域代码)/messages.json`
 - 如果需要新建一种语言的翻译，**复制一份 `en` 或 `zh_CN` 目录**，在此基础上进行翻译即可。
 - 可用的**语言区域代码**请参考官方文档：<https://developer.chrome.com/docs/extensions/reference/api/i18n#locales>
+- 当英文（`en`）或中文（`zh_CN`）新增了翻译条目后，可使用 Node 执行 `/tools/sync-locales.js` 脚本。脚本会对比 `en` 与其他语言，将 `en` 中新增的翻译项复制到其他语言目录下。执行完成后，再打开你负责翻译的语言文件，把新增的占位条目补全为对应语言的翻译即可。
 
 ## 注入脚本翻译（`catch-script`）
 
 除了扩展程序 UI，用于网页注入的脚本也有独立的翻译文件。
 
 - 文件位置：`/catch-script/i18n.js`
-- 该文件会导出一个 `window.CatCatchI18n` 对象。
-- 请参考已有的英文或中文条目，**增加对应语言的翻译键值**。
+- 该文件导出一个 `window.CatCatchI18n` 全局对象，供脚本使用。翻译文本是 `messages` 对象。
+- `messages` 下的键名对应浏览器的 `navigator.languages` 语言区域代码，存放了多个语言的翻译对象。
+- 需要新增翻译时，**复制 `messages.en` 或 `messages.zh` 对象**，将键名改为你的语言区域代码，并完成其中文案的翻译即可。
 
 ## 本文档翻译（cat-catch-docs）
 
