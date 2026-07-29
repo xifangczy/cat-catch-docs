@@ -1,5 +1,9 @@
 # 常见问题
 
+## 提示 该网站要求禁止运行本程序
+
+查看 [强制屏蔽网站](blockedsite)
+
 ## 抓不到资源如何做
 
 先尝试[深度搜索](cache-capture#deep-search)。再尝试[缓存捕捉](cache-capture#cache-capture)，该功能需要等待视频缓冲完毕后才能下载。仍然无法下载，可以尝试最后的[屏幕捕捉](cache-capture#screen-capture)。

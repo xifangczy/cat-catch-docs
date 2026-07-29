@@ -110,7 +110,7 @@ export default defineConfig({
               },
             },
           },
-        }
+        },
       },
     },
     en: {
@@ -234,5 +234,9 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/xifangczy/cat-catch" },
     ],
+    footer: {
+      message: 'Powered by <a href="https://vitepress.dev/" target="_blank">VitePress</a>, Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>, accelerated by <a href="https://www.cloudflare.com/" target="_blank">Cloudflare</a>',
+      copyright: 'Copyright © 2026-present o2bmm'
+    },
   },
 });

@@ -1,5 +1,9 @@
 # FAQ
 
+## This website requires the extension to be disabled
+
+See [Force-Blocked Sites](blockedsite)
+
 ## What to Do When Resources Cannot Be Captured
 
 First, try [Deep Search](cache-capture#deep-search). Then try [Cache Capture](cache-capture#cache-capture), which requires the video to finish buffering before downloading. If download still fails, try the last option: [Screen Capture](cache-capture#screen-capture).
