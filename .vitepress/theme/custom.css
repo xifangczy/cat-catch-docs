@@ -1,4 +1,4 @@
-/* 安装卡片网格 */
+/* 安装页面 卡片网格 */
 .install-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -40,7 +40,6 @@
   margin-bottom: 1.2rem;
   line-height: 1.4;
 }
-
 /* 按钮样式：和 VitePress 品牌色协调 */
 a.card-btn {
   display: inline-block;
@@ -61,13 +60,11 @@ a.card-btn:hover {
   text-decoration: none;
   filter: brightness(0.85);
 }
-
 /* 二维码居中容器 */
 .qr-box {
   text-align: center;
   margin: 2rem 0;
 }
-
 .qr-box img {
   display: block;
   margin: 0 auto;
@@ -76,9 +73,40 @@ a.card-btn:hover {
   padding: 0.5rem;
   background: #fff;
 }
-
 .qr-box p {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: var(--vp-c-text-2);
+}
+
+/* logo 光球 */
+.VPHero .image {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+.VPHero .image-container {
+  position: relative;
+}
+
+.VPHero .image-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(100, 108, 255, 0.6) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  filter: blur(40px);
+  z-index: -1; /* 放到图片底层 */
+  pointer-events: none;
 }

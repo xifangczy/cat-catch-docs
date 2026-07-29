@@ -28,5 +28,6 @@
 - 在 `src` 目录下，**复制一份 `en` 目录**，将其修改成你的语言区域代码，完成翻译。
 - 编辑 `/.vitepress/config.mts` 文件：
   - 在 `locales` 对象中，**复制 `en` 或 `root` 对象**，增加你的语言翻译。
+  - 在 `themeConfig.search.locales` 中，**需要增加一份对应语言的通用搜索翻译**。
 
 完成以上步骤后提交 Pull Request，我们会在审核后合并你的翻译。
