@@ -28,6 +28,5 @@ If you would like to translate this documentation, work in the docs repository:
 - Under the `src` directory, **copy the `en` directory**, rename it to your locale code, and complete the translation.
 - Edit the `/.vitepress/config.mts` file:
   - In the `locales` object, **copy the `en` or `root` object** and add your language translation.
-  - In `themeConfig.search.locales`, **add a generic search translation for your language**.
 
 After completing the above steps, submit a Pull Request and we will review and merge your translation.
