@@ -1,85 +1,146 @@
-/* 安装页面 卡片网格 */
+/* ==========================================================================
+   基础变量重写与全局细节微调 (Global Fine-tuning)
+   ========================================================================== */
+:root {
+  --vp-brand-gradient: linear-gradient(
+    135deg,
+    var(--vp-c-brand-1) 0%,
+    var(--vp-c-brand-2) 100%
+  );
+  --custom-card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --custom-card-hover-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.12);
+}
+.dark {
+  --custom-card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
+  --custom-card-hover-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.5);
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-divider);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-text-3);
+}
+
+/* ==========================================================================
+   安装页面卡片网格优化 (Enhanced Card Grid)
+   ========================================================================== */
 .install-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.2rem;
-  margin: 1.5rem 0 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 1.8rem 0 2.5rem;
 }
-
 .card {
+  position: relative;
   background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
-  padding: 1.5rem 1.2rem 1.8rem;
+  border: 1px solid var(--vp-c-bg-soft-up);
+  border-radius: 14px;
+  padding: 1.8rem 1.4rem;
   text-align: center;
+  box-shadow: var(--custom-card-shadow);
   transition:
-    box-shadow 0.2s,
-    border-color 0.2s;
+    transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.25s cubic-bezier(0.25, 0.8, 0.25, 1),
+    border-color 0.25s ease;
+  overflow: hidden;
+  cursor: default;
 }
-
 .card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-color: var(--vp-c-brand);
+  transform: translateY(-4px);
+  border-color: var(--vp-c-brand-1);
+  box-shadow: var(--custom-card-hover-shadow);
+  border: 1px solid var(--vp-c-brand-1);
 }
-
 .card-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
+  display: inline-block;
+  transition: transform 0.25s ease;
 }
-
+.card:hover .card-icon {
+  transform: scale(1.12);
+}
 .card-title {
   font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
   color: var(--vp-c-text-1);
 }
-
 .card-desc {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--vp-c-text-2);
-  margin-bottom: 1.2rem;
-  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
-/* 按钮样式：和 VitePress 品牌色协调 */
 a.card-btn {
-  display: inline-block;
-  padding: 0.45rem 1.5rem;
-  background: var(--vp-c-brand);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.6rem;
+  background: var(--vp-c-brand-1);
   color: #ffffff !important;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
-  transition:
-    background 0.2s,
-    filter 0.2s;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 a.card-btn:hover {
-  background: var(--vp-c-brand);
+  background: var(--vp-c-brand-2);
   color: #ffffff !important;
   text-decoration: none;
-  filter: brightness(0.85);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-/* 二维码居中容器 */
+
+/* ==========================================================================
+   二维码居中容器优化 (QR Code Box)
+   ========================================================================== */
 .qr-box {
-  text-align: center;
-  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 1.2rem 1.5rem;
+  background: var(--vp-c-bg-soft);
+  border-radius: 12px;
+  border: 1px dashed var(--vp-c-divider);
+  width: fit-content;
+  max-width: 100%;
 }
 .qr-box img {
   display: block;
   margin: 0 auto;
   border-radius: 8px;
   border: 1px solid var(--vp-c-divider);
-  padding: 0.5rem;
-  background: #fff;
+  padding: 0.6rem;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  max-width: 200px;
+  width: 100%;
+  height: auto;
 }
 .qr-box p {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 500;
   color: var(--vp-c-text-2);
+  text-align: center;
 }
 
-/* logo 光球 */
+/* ==========================================================================
+   Hero Logo 光球美化 (Hero Image Glow)
+   ========================================================================== */
 .VPHero .image {
   position: relative !important;
   display: flex !important;
@@ -91,22 +152,66 @@ a.card-btn:hover {
 .VPHero .image-container {
   position: relative;
 }
-
 .VPHero .image-container::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 450px;
-  height: 450px;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(100, 108, 255, 0.6) 0%,
-    rgba(0, 0, 0, 0) 70%
+    var(--vp-c-brand-soft) 0%,
+    rgba(100, 108, 255, 0.53) 45%,
+    transparent 70%
   );
-  filter: blur(40px);
-  z-index: -1; /* 放到图片底层 */
+  filter: blur(50px);
+  z-index: -1;
   pointer-events: none;
+  animation: hero-glow-pulse 6s ease-in-out infinite alternate;
+}
+@keyframes hero-glow-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   额外拓展样式 (Extra Polish)
+   ========================================================================== */
+mark,
+.highlight {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.custom-badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 20px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  border: 1px solid var(--vp-c-brand-1);
+  vertical-align: middle;
+  margin-left: 0.3rem;
+}
+.vp-doc div[class*="language-"] {
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+.vp-doc .custom-block {
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
 }

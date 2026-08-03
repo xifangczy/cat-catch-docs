@@ -5,7 +5,7 @@
     <div class="card-icon">🌐</div>
     <div class="card-title">Chrome 应用商店</div>
     <div class="card-desc">适用于 Chrome、Edge 及所有 Chromium 浏览器</div>
-    <a href="https://chrome.google.com/webstore/detail/jfedfbgedapdagkghmgibemcoggfppbb" class="card-btn" target="_blank">前往安装</a>
+    <a href="https://chromewebstore.google.com/detail/cat-catch/jfedfbgedapdagkghmgibemcoggfppbb" class="card-btn" target="_blank">前往安装</a>
   </div>
   <div class="card">
     <div class="card-icon">🌊</div>
@@ -16,7 +16,7 @@
   <div class="card">
     <div class="card-icon">🦊</div>
     <div class="card-title">Firefox 附加组件</div>
-    <div class="card-desc">Mozilla Firefox 浏览器适用</div>
+    <div class="card-desc">Mozilla Firefox 浏览器适用, 需非国区IP访问</div>
     <a href="https://addons.mozilla.org/addon/cat-catch/" class="card-btn" target="_blank">前往安装</a>
   </div>
   <div class="card">

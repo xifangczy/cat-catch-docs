@@ -5,7 +5,7 @@
     <div class="card-icon">🌐</div>
     <div class="card-title">Chrome Web Store</div>
     <div class="card-desc">For Chrome, Edge, and all Chromium-based browsers</div>
-    <a href="https://chrome.google.com/webstore/detail/jfedfbgedapdagkghmgibemcoggfppbb" class="card-btn" target="_blank">Install</a>
+    <a href="https://chromewebstore.google.com/detail/cat-catch/jfedfbgedapdagkghmgibemcoggfppbb" class="card-btn" target="_blank">Install</a>
   </div>
   <div class="card">
     <div class="card-icon">🌊</div>
