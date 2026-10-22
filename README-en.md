@@ -12,7 +12,7 @@ The official documentation site for [cat-catch](https://github.com/xifangczy/cat
 
 | Technology | Version                       |
 | ---------- | ----------------------------- |
-| VitePress  | 2.0.0-alpha.18                |
+| VitePress  | 2.0.0-alpha.20                |
 | Node.js    | 24+                           |
 | pnpm       | 11+                           |
 | Deployment | GitHub Pages + GitHub Actions |
@@ -52,11 +52,11 @@ pnpm docs:preview
 
 ## 📝 Writing Documentation
 
-| Content          | Directory             | Notes                                              |
-| ---------------- | --------------------- | -------------------------------------------------- |
-| Chinese docs     | `src/docs/`           | Simplified Chinese, site root path `/`             |
-| English docs     | `src/en/docs/`        | English, path prefix `/en/`                        |
-| Image assets     | `src/public/assets/`  | All images go here, copied as-is to the build     |
+| Content      | Directory            | Notes                                         |
+| ------------ | -------------------- | --------------------------------------------- |
+| Chinese docs | `src/docs/`          | Simplified Chinese, site root path `/`        |
+| English docs | `src/en/docs/`       | English, path prefix `/en/`                   |
+| Image assets | `src/public/assets/` | All images go here, copied as-is to the build |
 
 > The two doc sets correspond one-to-one. When you edit a Chinese doc, remember to update the matching English doc as well.
 
@@ -70,10 +70,10 @@ Pushing code to the `main` branch triggers GitHub Actions to automatically build
 
 ## 📖 Related Repositories
 
-| Repository                                          | Description                                      |
-| --------------------------------------------------- | ------------------------------------------------ |
+| Repository                                          | Description                                     |
+| --------------------------------------------------- | ----------------------------------------------- |
 | [cat-catch](https://github.com/xifangczy/cat-catch) | The browser extension (Chrome / Edge / Firefox) |
-| [cat-catch-docs](https://cat-catch.94cat.com/)      | This documentation site repo                     |
+| [cat-catch-docs](https://cat-catch.94cat.com/)      | This documentation site repo                    |
 
 ## License
 
@@ -97,16 +97,24 @@ We welcome translations into new languages. The site uses the same locale codes 
    export default defineConfig({
      // ...
      locales: {
-       root: { /* ... */ },
-       en: { /* ... */ },
+       root: {
+         /* ... */
+       },
+       en: {
+         /* ... */
+       },
        ja: {
          label: "日本語",
          lang: "ja",
          link: "/ja/",
          description: "ウェブメディア取得ブラウザ拡張",
          themeConfig: {
-           nav: [ /* translated nav */ ],
-           sidebar: [ /* translated sidebar, links prefixed with /ja/ */ ],
+           nav: [
+             /* translated nav */
+           ],
+           sidebar: [
+             /* translated sidebar, links prefixed with /ja/ */
+           ],
            docFooter: { prev: "前へ", next: "次へ" },
            outline: { label: "On This Page" },
            sidebarMenuLabel: "メニュー",
@@ -122,11 +130,18 @@ We welcome translations into new languages. The site uses the same locale codes 
            locales: {
              ja: {
                translations: {
-                 button: { buttonText: "ドキュメントを検索", buttonAriaLabel: "ドキュメントを検索" },
+                 button: {
+                   buttonText: "ドキュメントを検索",
+                   buttonAriaLabel: "ドキュメントを検索",
+                 },
                  modal: {
                    noResultsText: "結果が見つかりません",
                    resetButtonTitle: "検索条件をクリア",
-                   footer: { selectText: "選択", navigateText: "移動", closeText: "閉じる" },
+                   footer: {
+                     selectText: "選択",
+                     navigateText: "移動",
+                     closeText: "閉じる",
+                   },
                  },
                },
              },
@@ -148,12 +163,12 @@ We welcome translations into new languages. The site uses the same locale codes 
 
 Use one of the codes from the [Chrome i18n locale list](https://developer.chrome.com/docs/extensions/reference/api/i18n?hl=zh-cn#locales). Common ones:
 
-| Code    | Language              | Code    | Language                     |
-| ------- | --------------------- | ------- | ---------------------------- |
-| `en`    | English               | `ja`    | 日本語 (Japanese)            |
-| `ko`    | 한국어 (Korean)       | `fr`    | Français (French)            |
-| `de`    | Deutsch (German)      | `es`    | Español (Spanish)            |
-| `pt_BR` | Português (Brasil)    | `ru`    | Русский (Russian)            |
-| `it`    | Italiano (Italian)    | `nl`    | Nederlands (Dutch)           |
-| `zh_TW` | 中文（繁體）          | `vi`    | Tiếng Việt (Vietnamese)      |
-| `tr`    | Türkçe (Turkish)      | `id`    | Bahasa Indonesia             |
+| Code    | Language           | Code | Language                |
+| ------- | ------------------ | ---- | ----------------------- |
+| `en`    | English            | `ja` | 日本語 (Japanese)       |
+| `ko`    | 한국어 (Korean)    | `fr` | Français (French)       |
+| `de`    | Deutsch (German)   | `es` | Español (Spanish)       |
+| `pt_BR` | Português (Brasil) | `ru` | Русский (Russian)       |
+| `it`    | Italiano (Italian) | `nl` | Nederlands (Dutch)      |
+| `zh_TW` | 中文（繁體）       | `vi` | Tiếng Việt (Vietnamese) |
+| `tr`    | Türkçe (Turkish)   | `id` | Bahasa Indonesia        |

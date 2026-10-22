@@ -12,7 +12,7 @@
 
 | 技术      | 版本                          |
 | --------- | ----------------------------- |
-| VitePress | 2.0.0-alpha.18                |
+| VitePress | 2.0.0-alpha.20                |
 | Node.js   | 24+                           |
 | pnpm      | 11+                           |
 | 部署      | GitHub Pages + GitHub Actions |
@@ -52,11 +52,11 @@ pnpm docs:preview
 
 ## 📝 编写文档
 
-| 内容     | 目录                   | 说明                                    |
-| -------- | ---------------------- | --------------------------------------- |
-| 中文文档 | `src/docs/`            | 简体中文，站点根路径 `/`                |
-| 英文文档 | `src/en/docs/`         | English，路径前缀 `/en/`                |
-| 图片资源 | `src/public/assets/`   | 所有图片统一放这里，原样复制到构建产物  |
+| 内容     | 目录                 | 说明                                   |
+| -------- | -------------------- | -------------------------------------- |
+| 中文文档 | `src/docs/`          | 简体中文，站点根路径 `/`               |
+| 英文文档 | `src/en/docs/`       | English，路径前缀 `/en/`               |
+| 图片资源 | `src/public/assets/` | 所有图片统一放这里，原样复制到构建产物 |
 
 > 两套文档一一对应，修改一篇中文文档时记得同步更新对应的英文文档。
 
@@ -97,16 +97,24 @@ MIT
    export default defineConfig({
      // ...
      locales: {
-       root: { /* ... */ },
-       en: { /* ... */ },
+       root: {
+         /* ... */
+       },
+       en: {
+         /* ... */
+       },
        ja: {
          label: "日本語",
          lang: "ja",
          link: "/ja/",
          description: "ウェブメディア取得ブラウザ拡張",
          themeConfig: {
-           nav: [ /* 翻译后的导航栏 */ ],
-           sidebar: [ /* 翻译后的侧边栏，链接前缀改为 /ja/ */ ],
+           nav: [
+             /* 翻译后的导航栏 */
+           ],
+           sidebar: [
+             /* 翻译后的侧边栏，链接前缀改为 /ja/ */
+           ],
            docFooter: { prev: "前へ", next: "次へ" },
            outline: { label: "On This Page" },
            sidebarMenuLabel: "メニュー",
@@ -122,11 +130,18 @@ MIT
            locales: {
              ja: {
                translations: {
-                 button: { buttonText: "ドキュメントを検索", buttonAriaLabel: "ドキュメントを検索" },
+                 button: {
+                   buttonText: "ドキュメントを検索",
+                   buttonAriaLabel: "ドキュメントを検索",
+                 },
                  modal: {
                    noResultsText: "結果が見つかりません",
                    resetButtonTitle: "検索条件をクリア",
-                   footer: { selectText: "選択", navigateText: "移動", closeText: "閉じる" },
+                   footer: {
+                     selectText: "選択",
+                     navigateText: "移動",
+                     closeText: "閉じる",
+                   },
                  },
                },
              },
@@ -148,12 +163,12 @@ MIT
 
 请使用 [Chrome i18n 语言代码列表](https://developer.chrome.com/docs/extensions/reference/api/i18n?hl=zh-cn#locales) 中的代码。常用代码：
 
-| 代码    | 语言                  | 代码    | 语言                     |
-| ------- | --------------------- | ------- | ------------------------ |
-| `en`    | English               | `ja`    | 日本語（日语）           |
-| `ko`    | 한국어（韩语）        | `fr`    | Français（法语）         |
-| `de`    | Deutsch（德语）       | `es`    | Español（西班牙语）      |
-| `pt_BR` | Português (Brasil)    | `ru`    | Русский（俄语）          |
-| `it`    | Italiano（意大利语）  | `nl`    | Nederlands（荷兰语）     |
-| `zh_TW` | 中文（繁體）          | `vi`    | Tiếng Việt（越南语）     |
-| `tr`    | Türkçe（土耳其语）    | `id`    | Bahasa Indonesia         |
+| 代码    | 语言                 | 代码 | 语言                 |
+| ------- | -------------------- | ---- | -------------------- |
+| `en`    | English              | `ja` | 日本語（日语）       |
+| `ko`    | 한국어（韩语）       | `fr` | Français（法语）     |
+| `de`    | Deutsch（德语）      | `es` | Español（西班牙语）  |
+| `pt_BR` | Português (Brasil)   | `ru` | Русский（俄语）      |
+| `it`    | Italiano（意大利语） | `nl` | Nederlands（荷兰语） |
+| `zh_TW` | 中文（繁體）         | `vi` | Tiếng Việt（越南语） |
+| `tr`    | Türkçe（土耳其语）   | `id` | Bahasa Indonesia     |
