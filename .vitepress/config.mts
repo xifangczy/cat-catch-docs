@@ -60,6 +60,7 @@ export default defineConfig({
               { text: "在线ffmpeg", link: "/docs/online-ffmpeg" },
               { text: "媒体控制", link: "/docs/media-control" },
               { text: "Aria2 RPC", link: "/docs/aria2" },
+              { text: "扩展调用", link: "/docs/extension-api" },
             ],
           },
           {
@@ -155,6 +156,7 @@ export default defineConfig({
               { text: "Online ffmpeg", link: "/en/docs/online-ffmpeg" },
               { text: "Media Control", link: "/en/docs/media-control" },
               { text: "Aria2 RPC", link: "/en/docs/aria2" },
+              { text: "Extension API", link: "/en/docs/extension-api" },
             ],
           },
           {
