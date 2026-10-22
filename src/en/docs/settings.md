@@ -10,7 +10,7 @@ The browser judges the file when it is received.
 
 The capture type, also known as [MIME](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/MIME_types) extension type. Some websites do not provide the correct file extension, so the MIME extension type is needed to judge the file. The subtype supports the wildcard `*`.
 
-Relational operators are allowed, supporting `> >= < <= = !=` as well as range expressions. Capacity units support `B KB MB GB`\
+Relational operators are allowed, supporting `> >= < <= = !=` as well as range expressions. Capacity units support `B KB MB GB`  
 For example:
 
 `>= 200KB` resources greater than or equal to 200KB
@@ -31,8 +31,8 @@ If some resources have no extension or MIME type, you can use regex to match URL
 
 **Block Resources** You can block certain resources you don't want to capture.
 
-::: info
-Regex matching is inefficient. Minimize the use of regex to avoid excessive resource usage.
+::: info  
+Regex matching is inefficient. Minimize the use of regex to avoid excessive resource usage.  
 :::
 
 ## Block URLs
@@ -72,6 +72,14 @@ You need to enable the `Use Custom Filename to Save File` option in **Other Sett
 ## Other Settings
 
 ![Other Settings](/assets/other-settings.png)
+
+### Show Grouping
+
+When this option is enabled, a number pref*ix such as `[1]` is displayed before each resource in the resource list. Resources with the same number are most likely in the same group, i.e., the video stream and audio stream of the same video.*
+
+*The grouping is based on the resource capture time: by default, two resources captured within 120 milliseconds of each other are marked as one group, because video and audio data are usually loaded within a close time range. If your computer has poor performance, resources may be incorrectly grouped; you can adjust the `Grouping Time` accordingly.*
+
+*The grouping is for reference only. It is mainly used to qui*ckly locate the audio corresponding to a video when there are many resources, or to determine whether the audio still needs to be downloaded for a video.
 
 ### Never Enable Cat Catch Downloader
 
