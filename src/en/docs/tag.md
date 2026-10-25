@@ -25,6 +25,8 @@
 | `${tabId}` | The browser Tab ID the resource belongs to | 520 |
 | `${data}` | Resource data, in JSON format | {"url":"https://bmmmd.com/test.mp4", ...} |
 | `${action}` | Only allowed in [Data Transmission](settings#send)<br>If it is a resource, this tag is replaced with 'catch'<br>If it is a key, this tag is replaced with 'addKey' | catch <br> addKey |
+| **`${clipboard}`** | Get content from the clipboard, up to 100 characters; longer content will be truncated. Recommended to use the exists function as a fallback `${clipboard\|exists:"*","${title}"}` | `Copied content` |
+| `${br}` | Line break | `\n` |
 
 ---
 
@@ -41,6 +43,8 @@ The bolded tags in the above list can use functions
 | exists | Output if exists<br>Otherwise output the second parameter. If there is no second parameter, output nothing. | `${referer\|exists:'--headers "Referer:*"'}`<br>If referer exists, output --headers "Referer:*"<br>The * will eventually be replaced with the referer itself.<br><br>*Recommended to be filled in the m3u8DL parameters. If referer exists, pass the `--headers` parameter to m3u8DL, otherwise do not pass it.*<br><br>`${fullFileName\|exists:"*","${title}"}`<br>If there is a filename, output itself; if there is no filename, output the webpage title. |
 | to | String conversion<br>base64<br>urlEncode<br>urlDecode<br>lowerCase<br>upperCase<br>filter | `${title\|to:base64}`<br>5rWL6K+V6KeG6aKR<br>base64 encoding<br><br>`${url\|to:urlEncode}`<br>https%3A%2F%2Fbmmmd.com%2Ftest.m3u8<br>url encoding<br><br>`${url\|to:lowerCase}` Convert English letters to lowercase<br>`${url\|to:upperCase}` Convert English letters to uppercase<br><br>`${url\|to:filter}`  Replace characters that cannot be used as filenames with HTML character entities |
 | filter | Filter/replace characters that cannot be used as filenames | `${url\|filter:"_"}` Replace characters that cannot be used as filenames with underscore<br>Replaced characters `\ / < > : " \| ? * ~` |
+| before | Get the content before the specified character | `${title\|before:"-"}` Get the content before the first "-" in the title <br> `${title\|before:"-",true}` Get the content before the last "-" in the title |
+| after | Get the content after the specified character | `${title\|after:"-"}` Get the content after the first "-" in the title <br> `${title\|after:"-",true}` Get the content after the last "-" in the title |
 
 Supports chained calls, for example:
 

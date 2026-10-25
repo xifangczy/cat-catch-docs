@@ -25,6 +25,8 @@
 | `${tabId}` | 资源所属的浏览器Tab ID | 520 |
 | `${data}` | 资源原始数据, JSON格式 | {"url":"https://bmmmd.com/test.mp4", ...} |
 | `${action}` | 只允许在[数据发送](settings#send)中使用<br>如果是资源, 该标签会被替换为 'catch' <br>如果是密钥, 该标签会被替换为 'addKey' | catch <br> addKey |
+| **`${clipboard}`** | 从剪贴板获取内容，最长100个字符，过长会被截断，建议使用exists函数兜底 `${clipboard\|exists:"*","${title}"}` | `复制的内容` |
+| `${br}` | 换行符 | `\n` |
 
 ---
 
@@ -41,6 +43,8 @@
 | exists | 如果存在则输出<br>反之输出第二个参数，没有第二个参数，不输出任何内容。 | `${referer\|exists:'--headers "Referer:*"'}`<br>如果存在referer 则输出 --headers "Referer:*"<br>*号最终会被替换成referer本身。<br><br>*建议填写在m3u8DL参数内，如果存在referer向m3u8DL传递`--headers`参数，如果没有则不传递。*<br><br>`${fullFileName\|exists:"*","${title}"}`<br>如果有文件名输出自己，没有文件名输出网页标题。 |
 | to | 字符串转换<br>base64<br>urlEncode<br>urlDecode<br>lowerCase<br>upperCase<br>filter | `${title\|to:base64}`<br>5rWL6K+V6KeG6aKR<br>base64编码<br><br>`${url\|to:urlEncode}`<br>https%3A%2F%2Fbmmmd.com%2Ftest.m3u8<br>url编码<br><br>`${url\|to:lowerCase}` 英文字母转小写<br>`${url\|to:upperCase}` 英文字母转大写<br><br>`${url\|to:filter}`  无法作为文件名的字符替换为HTML字符实体 |
 | filter | 过滤/替换 无法作为文件名的字符 | `${url\|filter:"_"}` 把不能作为文件名的字符 替换为 下划线<br>被替换的字符 `\ / < > : " \| ? * ~` |
+| before | 获取指定字符之前的内容 | `${title\|before:"-"}` 获取标题中第一个 "-" 之前的内容 <br> `${title\|before:"-",true}` 获取标题中最后一个 "-" 之前的内容 |
+| after | 获取指定字符之后的内容 | `${title\|after:"-"}` 获取标题中第一个 "-" 之后的内容 <br> `${title\|after:"-",true}` 获取标题中最后一个 "-" 之后的内容 |
 
 支持链式调用，例如:
 
