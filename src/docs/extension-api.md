@@ -12,30 +12,9 @@ chrome.runtime.sendMessage(EXTENSION_ID, { action: "getData" }, (response) => {
 
 `EXTENSION_ID` 为猫抓扩展的 ID，可在浏览器的扩展管理页面查看。
 
-::: tip
-其他扩展可以直接调用。网页调用需要站点在猫抓 `manifest.json` 的 `externally_connectable` 白名单范围内。
-:::
-
 ## 支持的 action
 
 消息格式为对象，通过 `action` 字段区分不同的功能：
-
-```javascript
-chrome.runtime.onMessageExternal.addListener((request, sender, sendResponse) => {
-  if (request.action === "getData") {
-    if (request.tabId) {
-      sendResponse(cacheData[request.tabId] ?? null);
-      return true;
-    }
-    sendResponse(cacheData);
-    return true;
-  } else if (request.action === "getCurrentTabData") {
-    const tabId = request.tabId ?? G.tabId;
-    sendResponse(cacheData[tabId] ?? null);
-    return true;
-  }
-});
-```
 
 ### getData — 获取所有数据
 

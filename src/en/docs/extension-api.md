@@ -12,30 +12,9 @@ chrome.runtime.sendMessage(EXTENSION_ID, { action: "getData" }, (response) => {
 
 `EXTENSION_ID` is the ID of the Cat Catch extension, which can be found on the browser's extension management page.
 
-::: tip
-Other extensions can call this API directly. Calls from web pages require the site to be within the `externally_connectable` allowlist of Cat Catch's `manifest.json`.
-:::
-
 ## Supported Actions
 
 Messages are objects, and the `action` field determines the operation:
-
-```javascript
-chrome.runtime.onMessageExternal.addListener((request, sender, sendResponse) => {
-  if (request.action === "getData") {
-    if (request.tabId) {
-      sendResponse(cacheData[request.tabId] ?? null);
-      return true;
-    }
-    sendResponse(cacheData);
-    return true;
-  } else if (request.action === "getCurrentTabData") {
-    const tabId = request.tabId ?? G.tabId;
-    sendResponse(cacheData[tabId] ?? null);
-    return true;
-  }
-});
-```
 
 ### getData — Get All Data
 
