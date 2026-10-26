@@ -23,9 +23,9 @@
 | `${shareApi}` | System share API, only allowed in [#player-protocol](settings#player-protocol) |  |
 | `${range}` | Range generation tag, only allowed in m3u8 parser entry. For details, see [m3u8 Parse](m3u8parse) |  |
 | `${tabId}` | The browser Tab ID the resource belongs to | 520 |
-| `${data}` | Resource data, in JSON format | {"url":"https://bmmmd.com/test.mp4", ...} |
+| `${data}` | Raw resource data, in JSON format | {"url":"https://bmmmd.com/test.mp4", ...} |
 | `${action}` | Only allowed in [Data Transmission](settings#send)<br>If it is a resource, this tag is replaced with 'catch'<br>If it is a key, this tag is replaced with 'addKey' | catch <br> addKey |
-| **`${clipboard}`** | Get content from the clipboard, up to 100 characters; longer content will be truncated. Recommended to use the exists function as a fallback `${clipboard\|exists:"*","${title}"}` | `Copied content` |
+| **`${clipboard}`** | Must be enabled in `Replace Tags` settings<br>Get content from the clipboard, up to 100 characters; longer content will be truncated. Recommended to use the exists function as a fallback `${clipboard\|exists:"*","${title}"}` | `Copied content` |
 | `${br}` | Line break | `\n` |
 
 ---

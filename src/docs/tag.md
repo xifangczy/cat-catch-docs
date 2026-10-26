@@ -25,7 +25,7 @@
 | `${tabId}` | 资源所属的浏览器Tab ID | 520 |
 | `${data}` | 资源原始数据, JSON格式 | {"url":"https://bmmmd.com/test.mp4", ...} |
 | `${action}` | 只允许在[数据发送](settings#send)中使用<br>如果是资源, 该标签会被替换为 'catch' <br>如果是密钥, 该标签会被替换为 'addKey' | catch <br> addKey |
-| **`${clipboard}`** | 从剪贴板获取内容，最长100个字符，过长会被截断，建议使用exists函数兜底 `${clipboard\|exists:"*","${title}"}` | `复制的内容` |
+| **`${clipboard}`** | 需在`替换标签`设置中启用该标签<br>从剪贴板获取内容，最长100个字符，过长会被截断，建议使用exists函数兜底 `${clipboard\|exists:"*","${title}"}` | `复制的内容` |
 | `${br}` | 换行符 | `\n` |
 
 ---
