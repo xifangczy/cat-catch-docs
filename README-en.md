@@ -12,9 +12,9 @@ The official documentation site for [cat-catch](https://github.com/xifangczy/cat
 
 | Technology | Version                       |
 | ---------- | ----------------------------- |
-| VitePress  | 2.0.0-alpha.20                |
+| VitePress  | 2.0.0-alpha.21                |
 | Node.js    | 24+                           |
-| pnpm       | 11+                           |
+| pnpm       | 12+                           |
 | Deployment | GitHub Pages + GitHub Actions |
 
 ## 📁 Directory Structure
