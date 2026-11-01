@@ -65,7 +65,7 @@ Used for keyword replacement in Copy, Data Send, URL Protocol m3u8dl, Invoke Pro
 
 You need to enable the `Use Custom Filename to Save File` option in **Other Settings**. You can create directories, e.g., `${title}/${fullFileName}` will finally be stored in a folder created with the title.
 
-### ${clipboard}
+### $\{clipboard\}
 
 The clipboard tag. You need to manually enable and grant the clipboard read permission for this tag to work properly.
 
