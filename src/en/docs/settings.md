@@ -65,6 +65,10 @@ Used for keyword replacement in Copy, Data Send, URL Protocol m3u8dl, Invoke Pro
 
 You need to enable the `Use Custom Filename to Save File` option in **Other Settings**. You can create directories, e.g., `${title}/${fullFileName}` will finally be stored in a folder created with the title.
 
+### ${clipboard}
+
+The clipboard tag. You need to manually enable and grant the clipboard read permission for this tag to work properly.
+
 ## Invoke Local Program
 
 **For detailed usage, see the [Invoke Local Program](invoke) chapter**
@@ -75,11 +79,11 @@ You need to enable the `Use Custom Filename to Save File` option in **Other Sett
 
 ### Show Grouping
 
-When this option is enabled, a number pref*ix such as `[1]` is displayed before each resource in the resource list. Resources with the same number are most likely in the same group, i.e., the video stream and audio stream of the same video.*
+When this option is enabled, a number prefix such as `[1]` is displayed before each resource in the resource list. Resources with the same number are most likely in the same group, i.e., the video stream and audio stream of the same video.
 
-*The grouping is based on the resource capture time: by default, two resources captured within 120 milliseconds of each other are marked as one group, because video and audio data are usually loaded within a close time range. If your computer has poor performance, resources may be incorrectly grouped; you can adjust the `Grouping Time` accordingly.*
+The grouping is based on the resource capture time: by default, two resources captured within 120 milliseconds of each other are marked as one group, because video and audio data are usually loaded within a close time range. If your computer has poor performance, resources may be incorrectly grouped; you can adjust the `Grouping Time` accordingly.
 
-*The grouping is for reference only. It is mainly used to qui*ckly locate the audio corresponding to a video when there are many resources, or to determine whether the audio still needs to be downloaded for a video.
+The grouping is for reference only. It is mainly used to quickly locate the audio corresponding to a video when there are many resources, or to determine whether the audio still needs to be downloaded for a video.
 
 ### Never Enable Cat Catch Downloader
 
